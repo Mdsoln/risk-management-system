@@ -1,0 +1,18 @@
+/* 
+.sider {
+    background: #fff;
+}
+
+@media (max-width: 991px) {
+    .sider {
+        position: fixed;
+        z-index: 1000;
+    }
+}
+
+@media (min-width: 992px) {
+    .sider {
+        position: relative;
+        z-index: 1;
+    }
+} */

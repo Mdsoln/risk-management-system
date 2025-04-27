@@ -1,0 +1,27 @@
+[
+  {
+    "code": "REGULATORS",
+    "name": "Regulators",
+    "description": "Authorities responsible for overseeing compliance with laws, policies, and regulations."
+  },
+  {
+    "code": "GOVERNMENT_AUTHORITIES",
+    "name": "Government Authorities",
+    "description": "Government institutions and agencies that establish and enforce rules and policies."
+  },
+  {
+    "code": "SERVICE_PROVIDERS",
+    "name": "Service Providers",
+    "description": "Organizations providing services such as telecommunications, internet, and infrastructure support."
+  },
+  {
+    "code": "INTERNATIONAL_ORGANIZATION",
+    "name": "International Organization",
+    "description": "Global entities focused on setting international standards and guidelines for compliance and governance."
+  },
+  {
+    "code": "FUND",
+    "name": "Fund",
+    "description": "Financial institutions or funds responsible for resource allocation and investment management."
+  }
+]

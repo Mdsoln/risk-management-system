@@ -1,0 +1,103 @@
+/* Container styles */
+.tableHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+/* Search input styles */
+.searchInput {
+    width: 300px;
+}
+
+/* Add button styles */
+.addButton {
+    margin-left: 8px;
+}
+
+/* Table row actions */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Dropdown menu icon */
+.actionIcon {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Error alert styles */
+.errorAlert {
+    margin-bottom: 16px;
+}
+
+/* Loading spinner alignment */
+.loadingSpinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Modal styles */
+.modalContent {
+    padding: 16px;
+}
+
+/* Table cell styles */
+.tableCell {
+    word-break: break-word;
+}
+
+/* Pagination styles */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
+
+/* Card styles */
+.cardContainer {
+    padding: 16px;
+}
+
+/* Description table styles */
+.descriptionTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.descriptionTable th,
+.descriptionTable td {
+    padding: 8px;
+    border: 1px solid #e8e8e8;
+}
+
+.descriptionTable th {
+    background-color: #f0f2f5;
+    font-weight: 500;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .tableHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .searchInput {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .addButton {
+        width: 100%;
+    }
+
+    .pagination {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,14 @@
+.editable-textarea {
+    padding: 20px;
+
+}
+
+.editable-textarea-label {
+    padding: 0px 0px 5px 4px;
+
+}
+
+.editable-textarea-input-container {
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 10px;
+}

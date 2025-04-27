@@ -1,0 +1,19 @@
+.custom-descriptions-item-label {
+    color: black;
+    font-weight: 600;
+    padding-left: 3px !important;
+}
+
+.custom-descriptions-item-content {
+    padding: 5px 16px !important;
+    /* Use !important to override default padding */
+    /* margin-top: 50px !important; */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+    padding-right: 16px !important;
+}

@@ -1,0 +1,22 @@
+.tableHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.searchInput {
+    width: 200px;
+}
+
+.addButton {
+    margin-left: 8px;
+}
+
+.addButton:hover {
+    background-color: #1890ff;
+    color: white;
+}
+
+.error-display-container {
+    margin-bottom: 16px;
+}

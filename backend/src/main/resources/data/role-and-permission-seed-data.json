@@ -1,0 +1,95 @@
+[
+    {
+        "code": "DIRECTOR",
+        "name": "Director",
+        "description": "Full access to all director-level features.",
+        "permissions": [
+            {
+                "code": "VIEW_ALL_DATA",
+                "name": "View All Data",
+                "description": "Allows viewing of all data across the system."
+            },
+            {
+                "code": "EDIT_DEPARTMENT",
+                "name": "Edit Department",
+                "description": "Allows editing of department data."
+            },
+            {
+                "code": "VIEW_FINANCIAL_REPORTS",
+                "name": "View Financial Reports",
+                "description": "Allows viewing of financial reports."
+            },
+            {
+                "code": "APPROVE_BUDGET",
+                "name": "Approve Budget",
+                "description": "Allows approval of department budgets."
+            }
+        ]
+    },
+    {
+        "code": "MANAGER",
+        "name": "Manager",
+        "description": "Access to all manager-level features.",
+        "permissions": [
+            {
+                "code": "VIEW_TEAM_DATA",
+                "name": "View Team Data",
+                "description": "Allows viewing of data related to their team."
+            },
+            {
+                "code": "EDIT_TEAM_DATA",
+                "name": "Edit Team Data",
+                "description": "Allows editing of team-specific data."
+            },
+            {
+                "code": "APPROVE_PROJECTS",
+                "name": "Approve Projects",
+                "description": "Allows approval of team projects."
+            }
+        ]
+    },
+    {
+        "code": "CHAMPION",
+        "name": "Risk Champion",
+        "description": "Access to risk management features.",
+        "permissions": [
+            {
+                "code": "VIEW_RISK_DATA",
+                "name": "View Risk Data",
+                "description": "Allows viewing of risk-related data."
+            },
+            {
+                "code": "EDIT_RISK_DATA",
+                "name": "Edit Risk Data",
+                "description": "Allows editing of risk-related data."
+            },
+            {
+                "code": "VIEW_RISK_REPORTS",
+                "name": "View Risk Reports",
+                "description": "Allows viewing of risk management reports."
+            }
+        ]
+    },
+    {
+        "code": "MEMBER",
+        "name": "Member",
+        "description": "Basic access to member-level features.",
+        "permissions": [
+            {
+                "code": "VIEW_OWN_DATA",
+                "name": "View Own Data",
+                "description": "Allows viewing of their own data."
+            },
+            {
+                "code": "EDIT_OWN_DATA",
+                "name": "Edit Own Data",
+                "description": "Allows editing of their own data."
+            },
+            {
+                "code": "VIEW_MEMBER_REPORTS",
+                "name": "View Member Reports",
+                "description": "Allows viewing of reports related to their activities."
+            }
+        ]
+    }
+]

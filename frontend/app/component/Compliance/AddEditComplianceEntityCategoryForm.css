@@ -1,0 +1,15 @@
+.error-display-container {
+    margin-bottom: 16px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.scrollable-form {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}

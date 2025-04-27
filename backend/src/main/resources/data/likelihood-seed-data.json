@@ -1,0 +1,37 @@
+[
+  {
+    "likelihoodCategory": "Rare",
+    "categoryDefinition": "The risk is conceivable but is only likely to occur in extreme circumstances.",
+    "score": 1,
+    "color": "#ADD8E6",
+    "colorName": "Light Blue"
+  },
+  {
+    "likelihoodCategory": "Unlikely",
+    "categoryDefinition": "The risk occurs infrequently and is unlikely to occur within the next three years.",
+    "score": 2,
+    "color": "#90EE90",
+    "colorName": "Light Green"
+  },
+  {
+    "likelihoodCategory": "Possible",
+    "categoryDefinition": "There is an above average chance that the risk will occur at least once in the next three years.",
+    "score": 3,
+    "color": "#FFFF00",
+    "colorName": "Yellow"
+  },
+  {
+    "likelihoodCategory": "Likely",
+    "categoryDefinition": "The risk could easily occur, and is likely to occur at least once within the next 12 months.",
+    "score": 4,
+    "color": "#FFA500",
+    "colorName": "Orange"
+  },
+  {
+    "likelihoodCategory": "Almost Certain",
+    "categoryDefinition": "The risk is already occurring, or is likely to occur more than once within the next 12 months.",
+    "score": 5,
+    "color": "#FF0000",
+    "colorName": "Red"
+  }
+]

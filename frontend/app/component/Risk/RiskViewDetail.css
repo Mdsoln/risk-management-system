@@ -1,0 +1,154 @@
+.description {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.description-item {
+    padding: 5px !important;
+    margin: 0 !important;
+    font-size: 12px !important;
+    color: black !important;
+    padding-left: 0px !important;
+}
+
+.ant-descriptions-row {}
+
+.ant-descriptions-view {
+    border: 1px solid rgba(4, 0, 0, 0.06);
+}
+
+.ant-descriptions-item-label {
+    padding-left: 12px !important;
+    background-color: #f0f2f5 !important;
+    font-weight: 500 !important;
+    position: relative;
+    border-bottom: 1px solid rgb(222, 217, 217) !important;
+}
+
+.ant-descriptions-item-label::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 1px;
+    height: 70%;
+    background-color: #b6b2b2;
+}
+
+.ant-descriptions-view {
+    width: 100% !important;
+    border-radius: 0px !important;
+}
+
+.description-content-div {
+    padding: 4px !important;
+    padding-left: 13px !important;
+}
+
+.divider-icon {}
+
+.divider-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.divider-title-line {}
+
+.ql-editor {
+    padding: 0 !important;
+}
+
+/* ant-descriptions-item-content description-item */
+
+.description-content-table {
+    /* border: 1px solid #27aae1; */
+    /* padding: 12px !important; */
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    padding-top: 10px !important;
+    padding-bottom: 12px !important;
+}
+
+/* .description-item-table {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 12px !important;
+    color: black !important;
+    padding-left: 0px !important;
+    background-color: white !important;
+} */
+
+
+
+
+
+.description-table {
+    border-collapse: collapse;
+    /* margin-bottom: 20px; */
+    width: auto;
+    /* Make the table width auto to fit content */
+    font-size: 12px;
+    /* Set the font size to 12px */
+    border: none;
+    /* Remove table borders */
+}
+
+.description-table th,
+.description-table td {
+    padding: 5px;
+    /* Reduced padding */
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+    /* Ensure long words break to the next line */
+    white-space: normal;
+    /* Allow wrapping */
+    overflow: visible;
+    /* Show the overflow text */
+    border: none;
+    /* Remove cell borders */
+}
+
+.description-table th {
+    font-weight: 500;
+    text-overflow: ellipsis;
+    /* Add ellipsis if the text overflows */
+    position: relative;
+    /* Make sure the pseudo-element is positioned correctly */
+}
+
+.description-table th::after {
+    content: ':';
+    position: absolute;
+    right: 5px;
+    /* Adjust the position of the colon */
+}
+
+.description-table tr {
+    border-bottom: 1px solid #e8e8e8;
+    /* Add bottom border to each row */
+}
+
+.description-title {
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #f8f9fa;
+    padding: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 100%;
+}
+
+.likelihood-text,
+.impact-text,
+.risk-level-text {
+    padding: 2px 5px;
+    /* Add some padding for better readability */
+    display: inline-block;
+}
+
+.description-content-table {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}

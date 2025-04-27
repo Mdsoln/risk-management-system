@@ -1,0 +1,48 @@
+.custom-header {
+    font-weight: bold;
+    text-align: center;
+}
+
+.custom-header-left {
+    text-align: left;
+    float: left;
+}
+
+.custom-index {
+    text-align: center;
+}
+
+.custom-name {
+    text-align: left;
+}
+
+.custom-start-date {
+    text-align: center;
+}
+
+.custom-end-date {
+    text-align: center;
+}
+
+.custom-table {
+    margin-top: 20px;
+}
+
+.description-content-table {
+    padding: 10px;
+}
+
+.description-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.description-table th {
+    text-align: left;
+    padding: 8px;
+    background-color: #f0f0f0;
+}
+
+.description-table td {
+    padding: 8px;
+}

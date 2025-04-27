@@ -1,0 +1,47 @@
+[
+  {
+    "code": "LAWS",
+    "name": "Laws",
+    "description": "Legal frameworks and statutes governing organizational and regulatory practices."
+  },
+  {
+    "code": "POLICIES",
+    "name": "Policies",
+    "description": "Formal policies that outline principles, rules, and guidelines for decision-making and operations."
+  },
+  {
+    "code": "REGULATIONS",
+    "name": "Regulations",
+    "description": "Detailed rules and directives issued by authorities to enforce laws and policies."
+  },
+  {
+    "code": "MANUALS",
+    "name": "Manuals",
+    "description": "Comprehensive guides and instructions for executing organizational processes and practices."
+  },
+  {
+    "code": "CHARTERS",
+    "name": "Charters",
+    "description": "Formal documents defining the structure, purpose, and authority of organizational entities."
+  },
+  {
+    "code": "DIRECTIVES",
+    "name": "Directives",
+    "description": "Official instructions or orders issued by authorities to enforce compliance."
+  },
+  {
+    "code": "CIRCULARS",
+    "name": "Circulars",
+    "description": "Formal communications providing updates, instructions, or clarifications on policies and procedures."
+  },
+  {
+    "code": "CONTRACTS",
+    "name": "Contracts",
+    "description": "Legally binding agreements defining terms, obligations, and conditions between parties."
+  },
+  {
+    "code": "ACTS",
+    "name": "Acts",
+    "description": "Legislative enactments passed by governing bodies that establish legal obligations and rights."
+  }
+]

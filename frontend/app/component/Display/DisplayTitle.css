@@ -1,0 +1,13 @@
+.display-title-divider {
+    margin: 0;
+    padding: 0;
+}
+
+.display-title {
+    display: flex;
+    align-items: center;
+}
+
+.display-title-icon {
+    margin-right: 8px;
+}

@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Less Than",
+        "description": "Comparison operator for less than",
+        "code": "LT",
+        "symbol": "<"
+    },
+    {
+        "name": "Less Than or Equal To",
+        "description": "Comparison operator for less than or equal to",
+        "code": "LTE",
+        "symbol": "<="
+    },
+    {
+        "name": "Greater Than",
+        "description": "Comparison operator for greater than",
+        "code": "GT",
+        "symbol": ">"
+    },
+    {
+        "name": "Greater Than or Equal To",
+        "description": "Comparison operator for greater than or equal to",
+        "code": "GTE",
+        "symbol": ">="
+    },
+    {
+        "name": "Equal To",
+        "description": "Comparison operator for equal to",
+        "code": "EQ",
+        "symbol": "=="
+    },
+    {
+        "name": "Not Equal To",
+        "description": "Comparison operator for not equal to",
+        "code": "NEQ",
+        "symbol": "!="
+    }
+]

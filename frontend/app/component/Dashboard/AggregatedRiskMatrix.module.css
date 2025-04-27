@@ -1,0 +1,72 @@
+.riskMatrix {
+    text-align: center;
+    font-size: 11px;
+}
+
+.matrixHeader {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.matrixTable {
+    border-collapse: collapse;
+    margin: auto;
+    width: auto;
+    /* Ensure the table width is auto */
+    table-layout: auto !important;
+    /* Override Ant Design's table-layout */
+}
+
+.matrixTable th,
+.matrixTable td {
+    border: 1px solid #cbc5c5;
+    padding: 4px;
+    text-align: center;
+    white-space: normal;
+    /* Allow wrapping */
+    overflow: visible;
+    /* Show the overflow text */
+    width: 50px;
+    height: 50px;
+
+}
+
+
+
+@keyframes iconAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.iconHighlighted {
+    animation: iconAnimation 1s infinite;
+}
+
+.highlighted {
+    /* Add any additional styles for highlighted cells */
+}
+
+.verticalText {
+    writing-mode: vertical-rl;
+    /* Ensure text flows vertically */
+    transform: rotate(180deg);
+    /* Rotate text vertically */
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    /* Align vertically in the middle */
+}

@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Number (Count)",
+        "description": "Measurement in terms of count",
+        "code": "COUNT"
+    },
+    {
+        "name": "Ratio (X:1)",
+        "description": "Measurement in terms of ratio",
+        "code": "RATIO"
+    },
+    {
+        "name": "Number of Members",
+        "description": "Measurement in terms of number of members",
+        "code": "MEMBERS"
+    },
+    {
+        "name": "Age (Years)",
+        "description": "Measurement in terms of age",
+        "code": "AGE"
+    },
+    {
+        "name": "Monetary Amount (Tzs)",
+        "description": "Measurement in terms of monetary amount",
+        "code": "MONEY"
+    },
+    {
+        "name": "Years",
+        "description": "Measurement in terms of years",
+        "code": "YEARS"
+    },
+    
+    {
+        "name": "Date and Time",
+        "description": "Measurement in terms of date and time",
+        "code": "DATETIME"
+    },
+    {
+        "name": "Date",
+        "description": "Measurement in terms of date",
+        "code": "DATE"
+    },
+    {
+        "name": "Percentage",
+        "description": "Measurement in terms of percentage",
+        "code": "PERCENTAGE"
+    },
+    {
+        "name": "Amount",
+        "description": "Measurement in terms of amount",
+        "code": "AMOUNT"
+    },
+    {
+        "name": "Number of days",
+        "description": "Measurement in terms of number of days",
+        "code": "DAYS"
+    },
+    {
+        "name": "Months",
+        "description": "Measurement in terms of months",
+        "code": "MONTHS"
+    },
+    {
+        "name": "Quantity",
+        "description": "Measurement in terms of quantity",
+        "code": "QUANTITY"
+    }
+]

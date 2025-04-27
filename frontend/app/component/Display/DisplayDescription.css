@@ -1,0 +1,22 @@
+.display-description {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+
+.display-description-icon {
+    margin-right: 8px;
+}
+
+.display-description-label {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.display-description-value {
+    padding: 10px;
+    background-color: #f0f9fd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}

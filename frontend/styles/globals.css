@@ -1,0 +1,203 @@
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#root,
+#__next {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    background-color: #f0f2f5;
+}
+
+/* Example CSS for light mode */
+.light-mode.text {
+    color: #000;
+    background-color: green;
+}
+
+/* Example CSS for dark mode */
+.dark-mode.text {
+    color: #fff;
+    background-color: red;
+}
+
+/* 
+.ant-table-tbody {
+    padding: 0 !important;
+}
+
+.ant-table-tbody>tr>td {
+    padding: 0 !important;
+} */
+
+/* table */
+.ant-table {
+    /* font-size: 13px !important; */
+}
+
+/* row data */
+.ant-table-tbody>tr>td {
+    /* height: 5px !important;
+    padding: 10px !important; */
+}
+
+/* row tags */
+.my-tag {
+    /* font-size: 12px !important; */
+}
+
+.ant-table-thead>tr>th {
+    /* height: 5px !important;
+    padding: 4px !important; */
+}
+
+
+
+/* 
+.ant-table .ant-table-container .ant-table-content table thead.ant-table-thead .ant-table-cell {
+    background-color: #16a7e6;
+} */
+
+
+
+/* Tabs especially in (Table pages) */
+
+.globalFlexIconWithText {
+    display: flex;
+    align-items: center;
+}
+
+.globalFlexIcon {
+    margin-right: 8px;
+}
+
+
+
+/* editor */
+.quill-editor-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.quill-editor {
+    flex: 1;
+    min-height: 150px;
+    /* Minimum height for better UX */
+}
+
+
+
+
+.form-item {
+    background-color: #f0f2f5;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
+}
+
+.form-item-container {
+    margin-bottom: 20px;
+    border: 1px solid #d9d9d9;
+    padding: 10px;
+    background-color: rgba(244, 244, 244, var(--tw-bg-opacity));
+    border-radius: 8px;
+}
+
+.modal-content {
+    height: 90vh;
+    overflow-y: auto;
+}
+
+
+/* Apply styles to all Ant Design buttons */
+.ant-btn {
+    border-radius: 0 !important;
+    /* Remove border radius to make buttons square */
+    height: auto;
+    /* Make sure height is auto-adjusted for different button sizes */
+    padding: 8px 16px;
+    /* Adjust padding as needed for square buttons */
+}
+
+/* Specific adjustments for different button sizes */
+.ant-btn-lg {
+    padding: 10px 16px;
+    /* Adjust padding for large buttons */
+}
+
+.ant-btn-sm {
+    padding: 4px 8px;
+    /* Adjust padding for small buttons */
+}
+
+
+/* Apply styles to all Ant Design inputs */
+.ant-input {
+    border-radius: 0 !important;
+    /* Remove border radius to make inputs square */
+}
+
+/* Apply styles to all Ant Design input groups */
+.ant-input-group-addon,
+.ant-input-group-wrapper,
+.ant-input-affix-wrapper {
+    border-radius: 0 !important;
+    /* Remove border radius to make input groups square */
+}
+
+/* Apply styles to all Ant Design textareas */
+.ant-input-textarea {
+    border-radius: 0 !important;
+    /* Remove border radius to make textareas square */
+}
+
+/* Apply styles to all Ant Design select inputs */
+.ant-select-selector {
+    border-radius: 0 !important;
+    /* Remove border radius to make select inputs square */
+}
+
+/* Apply styles to all Ant Design date pickers */
+.ant-picker {
+    border-radius: 0 !important;
+    /* Remove border radius to make date pickers square */
+}
+
+/* Apply styles to all Ant Design input numbers */
+.ant-input-number,
+.ant-input-number-handler-wrap {
+    border-radius: 0 !important;
+    /* Remove border radius to make input numbers square */
+}
+
+
+.ql-editor p,
+.ql-editor ol,
+.ql-editor ul,
+.ql-editor pre,
+.ql-editor blockquote,
+.ql-editor h1,
+.ql-editor h2,
+.ql-editor h3,
+.ql-editor h4,
+.ql-editor h5,
+.ql-editor h6 {
+    margin: 0;
+    padding: 10px !important;
+    min-height: 100px !important;
+}

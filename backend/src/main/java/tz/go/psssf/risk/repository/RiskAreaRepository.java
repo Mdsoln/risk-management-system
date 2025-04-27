@@ -1,0 +1,10 @@
+package tz.go.psssf.risk.repository;
+
+import io.quarkus.hibernate.orm.panache.PanacheRepositoryBase;
+import jakarta.enterprise.context.ApplicationScoped;
+import tz.go.psssf.risk.entity.RiskArea;
+
+
+@ApplicationScoped
+public class RiskAreaRepository implements PanacheRepositoryBase<RiskArea, String> {
+}

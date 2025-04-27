@@ -1,0 +1,19 @@
+.tableHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.searchInput {
+    width: 300px;
+}
+
+.addButton {
+    background-color: #1890ff;
+    color: white;
+    border: none;
+}
+
+.addButton:hover {
+    background-color: #40a9ff;
+}

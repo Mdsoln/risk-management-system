@@ -1,0 +1,97 @@
+.form-card {
+    margin-bottom: 16px;
+    /* Adjust the value as needed for the desired spacing */
+}
+
+.quill-editor-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.quill-editor {
+    flex: 1;
+    min-height: 150px;
+    /* Minimum height for better UX */
+}
+
+
+.ant-slider-mark-text {
+    font-size: 12px;
+    color: #000;
+    white-space: nowrap;
+    margin-top: 10px;
+
+    /* Adjust this value to create space between text and slider */
+}
+
+.ant-slider {
+    margin-top: 20px;
+    /* Adjust this value to create space between slider and form item */
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.ant-tooltip-inner {
+    background-color: gray !important;
+    /* z-index: -1000 !important; */
+    padding: 3px !important;
+    color: #fff !important;
+    font-size: 8px !important;
+    min-height: auto !important;
+    border: solid 2px black !important;
+}
+
+.ant-slider .ant-slider-track {
+    background-color: black !important;
+    border-radius: 2px !important;
+
+}
+
+
+.ant-slider .ant-slider-handle::after {
+
+    background-color: black !important;
+    box-shadow: 0 0 0 5px white !important;
+
+
+}
+
+/* 
+.ant-slider-track {
+    background-color: var(--slider-track-color) !important;
+}
+
+.ant-slider-handle {
+    border-color: var(--slider-handle-border-color) !important;
+} */
+
+/* .slider-track {
+    background-color: var(--slider-track-color);
+}
+
+.slider-handle {
+    border-color: var(--slider-handle-color);
+} */
+/* Add this to your AddEditRiskForm.css file */
+
+
+
+.error-display-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+/* .ql-editor {
+    flex: 1;
+    min-height: 100px !important;
+    padding: 30px !important;
+
+} */
+
+.form-content {
+    padding: 20px;
+}

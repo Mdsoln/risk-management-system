@@ -1,0 +1,45 @@
+/* HeaderLayout.module.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    background: #f0f2f5;
+    height: 64px;
+    line-height: 64px;
+    position: fixed;
+    top: 0;
+    left: 270px;
+    right: 0;
+    z-index: 1000;
+    width: calc(100% - 270px);
+}
+
+.logo {
+    color: #000;
+    font-size: 20px;
+}
+
+.headerRight {
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    margin-right: 16px;
+}
+
+.icon {
+    font-size: 20px;
+    color: #000;
+    margin-right: 16px;
+}
+
+.username {
+    color: #000;
+    margin-right: 16px;
+}
+
+.avatar {
+    margin-right: 8px;
+}

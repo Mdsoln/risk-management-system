@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Draft",
+        "code": "DRAFT",
+        "description": "Initial draft by the risk champion",
+        "type": "CHAMPION"
+    },
+    {
+        "name": "Submitted for Review",
+        "code": "SUBMITTED_FOR_REVIEW",
+        "description": "Submitted for review to the department owner",
+        "type": "CHAMPION"
+    },
+    {
+        "name": "Resubmitted",
+        "code": "RESUBMITTED",
+        "description": "Resubmitted by the risk champion after feedback",
+        "type": "CHAMPION"
+    },
+    {
+        "name": "Under Review",
+        "code": "UNDER_REVIEW",
+        "description": "Under review by the department owner",
+        "type": "OWNER"
+    },
+    {
+        "name": "Rejected",
+        "code": "REJECTED",
+        "description": "Rejected and feedback provided by the department owner",
+        "type": "OWNER"
+    },
+    {
+        "name": "Approved",
+        "code": "APPROVED",
+        "description": "Approved by the department owner",
+        "type": "OWNER"
+    },
+    {
+        "name": "Closed",
+        "code": "CLOSED",
+        "description": "Closed after all assessments and approvals",
+        "type": "RISK"
+    }
+]

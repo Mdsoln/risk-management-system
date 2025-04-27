@@ -1,0 +1,35 @@
+/* Reduce padding for table rows */
+.customTableRow {
+    padding: 4px 8px !important;
+    /* Adjust padding as needed */
+}
+
+/* Center content in the "No" column both vertically and horizontally */
+.customTableCellCentered {
+    text-align: center;
+    /* Center horizontally */
+    vertical-align: middle;
+    /* Center vertically */
+    padding: 4px !important;
+    /* Adjust padding for cells as needed */
+}
+
+/* Additional styles for the TextArea component */
+.customTextArea {
+    resize: none;
+}
+
+/* Ensure that form items have minimal margins and center vertically */
+.customFormItem {
+    margin-bottom: 8px;
+    /* Adjust the margin as needed */
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+}
+
+/* Float content to the left in table cells */
+.floatLeft {
+    text-align: left;
+    /* Align text to the left */
+}

@@ -1,0 +1,11 @@
+# Ignore postgres backup folder
+postgres-backup/
+
+# Ignore postgres data folder
+postgres-data/
+
+# Ignore pgadmin data folder
+pgadmin-data/
+
+# Ignore OS-specific files
+.DS_Store

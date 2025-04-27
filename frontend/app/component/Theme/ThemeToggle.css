@@ -1,0 +1,12 @@
+.theme-toggle-container {
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle-label {
+    margin-right: 10px;
+}
+
+.theme-toggle-switch {
+    margin-right: 10px;
+}

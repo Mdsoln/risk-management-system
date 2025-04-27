@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Red",
+        "description": "High Risk",
+        "code": "H"
+    },
+    {
+        "name": "Amber",
+        "description": "Medium Risk",
+        "code": "M"
+    },
+    {
+        "name": "Green",
+        "description": "Low Risk",
+        "code": "L"
+    }
+]

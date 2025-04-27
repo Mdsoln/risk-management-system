@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Directorate Of Actuarial And Risk Management",
+    "description": "Directorate responsible for actuarial and risk management",
+    "code": "DARM",
+    "shortName": "DARM",
+    "type": "Directorate"
+  },
+  {
+    "name": "Director General Office",
+    "description": "Office of the Director General",
+    "code": "DG",
+    "shortName": "DG",
+    "type": "Directorate"
+  },
+  {
+    "name": "Directorate Of Planning, Investment And Projects Management",
+    "description": "Directorate responsible for planning, investment, and project management",
+    "code": "DPI",
+    "shortName": "DPI",
+    "type": "Directorate"
+  },
+  {
+    "name": "Directorate Of Human Resource and Administration",
+    "description": "Directorate responsible for human resources and administration",
+    "code": "DHRA",
+    "shortName": "DHRA",
+    "type": "Directorate"
+  },
+  {
+    "name": "Directorate of Procurement",
+    "description": "Directorate responsible for procurement",
+    "code": "DPS",
+    "shortName": "DPS",
+    "type": "Directorate"
+  },
+  {
+    "name": "Directorate Of Operations",
+    "description": "Directorate responsible for operations",
+    "code": "DO",
+    "shortName": "DO",
+    "type": "Directorate"
+  },
+  {
+    "name": "Directorate Of Information and Communication Technology",
+    "description": "Directorate responsible for information and communication technology",
+    "code": "DICT",
+    "shortName": "DICT",
+    "type": "Directorate"
+  },
+  {
+    "name": "Directorate Of Internal Audit",
+    "description": "Directorate responsible for internal audit",
+    "code": "DIA",
+    "shortName": "DIA",
+    "type": "Directorate"
+  },
+  {
+    "name": "Directorate Of Legal Services",
+    "description": "Directorate responsible for legal services",
+    "code": "DLS",
+    "shortName": "DLS",
+    "type": "Directorate"
+  },
+  {
+    "name": "Directorate Of Finance",
+    "description": "Directorate responsible for finance",
+    "code": "DF",
+    "shortName": "DF",
+    "type": "Directorate"
+  },
+  {
+    "name": "Public Relations And Member Education Unit",
+    "description": "Unit responsible for public relations and member education",
+    "code": "PR",
+    "shortName": "PR",
+    "type": "Unit"
+  }
+]

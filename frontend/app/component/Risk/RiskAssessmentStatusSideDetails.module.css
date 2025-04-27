@@ -1,0 +1,92 @@
+/* .statusSideDetails {
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: white;
+    border-left: 1px solid #e8e8e8;
+    font-size: 12px;
+} */
+.statusSideDetails {
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: white;
+    border-left: 1px solid #e8e8e8;
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.title {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.timeline {
+    margin-bottom: 20px;
+}
+
+.timelineItem {
+    margin-bottom: 10px;
+}
+
+.steps {
+    margin-bottom: 20px;
+}
+
+.descriptionContentTable {
+    margin-bottom: 20px;
+}
+
+.descriptionTable {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px;
+    border: none;
+    background-color: #f8f9fa;
+}
+
+.descriptionTable th,
+.descriptionTable td {
+    padding: 5px;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: visible;
+    border: none;
+}
+
+.descriptionTable th {
+    font-weight: bold;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.descriptionTable th::after {
+    content: ':';
+    position: absolute;
+    right: 5px;
+}
+
+.descriptionTable tr {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.descriptionTitle {
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #f8f9fa;
+    padding: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 100%;
+}

@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Strategic",
+        "description": "Strategic risks",
+        "code": "STR",
+        "riskAreas": [
+            {"name": "Reputation", "description": "Reputation risk", "code": "REP"},
+            {"name": "External Environment", "description": "External environment risk", "code": "EXT_ENV"},
+            {"name": "Solvency", "description": "Solvency risk", "code": "SOLV"},
+            {"name": "Longevity", "description": "Longevity risk", "code": "LONG"},
+            {"name": "Liability", "description": "Liability risk", "code": "LIAB"},
+            {"name": "Indexation", "description": "Indexation risk", "code": "INDX"},
+            {"name": "Political Risk", "description": "Political risk", "code": "POL"},
+            {"name": "Major Change", "description": "Major change risk", "code": "CHNG"}
+        ]
+    },
+    {
+        "name": "Financial",
+        "description": "Financial risks",
+        "code": "FIN",
+        "riskAreas": [
+            {"name": "Financial Management Reporting", "description": "Financial management and reporting risk", "code": "FIN_MGT"},
+            {"name": "Credit", "description": "Credit risk", "code": "CRED"},
+            {"name": "Liquidity", "description": "Liquidity risk", "code": "LIQ"}
+        ]
+    },
+    {
+        "name": "Market",
+        "description": "Market risks",
+        "code": "MRK",
+        "riskAreas": [
+            {"name": "Price", "description": "Price risk", "code": "PRC"},
+            {"name": "Foreign exchange", "description": "Foreign exchange risk", "code": "FX"},
+            {"name": "Interest rates", "description": "Interest rate risk", "code": "IR"},
+            {"name": "Investment Risks", "description": "Investment risks", "code": "INV"}
+        ]
+    },
+    {
+        "name": "Operational",
+        "description": "Operational risks",
+        "code": "OPR",
+        "riskAreas": [
+            {"name": "People & Culture", "description": "People and culture risk", "code": "PEOPLE"},
+            {"name": "Information Technology", "description": "Information technology risk", "code": "IT"},
+            {"name": "Knowledge & Information Management", "description": "Knowledge and information management risk", "code": "KNOW"},
+            {"name": "Third Party Performance", "description": "Third party performance risk", "code": "TPP"},
+            {"name": "Economic Risk", "description": "Economic risk", "code": "ECON"},
+            {"name": "Service Delivery", "description": "Service delivery risk", "code": "SERV"},
+            {"name": "Catastrophic", "description": "Catastrophic risk", "code": "CATA"},
+            {"name": "Legal & Regulatory Compliance", "description": "Legal and regulatory compliance risk", "code": "LEGAL"},
+            {"name": "Fraud & Corruption", "description": "Fraud and corruption risk", "code": "FRAUD"},
+            {"name": "Compliance Risk", "description": "Compliance risk", "code": "COMP"},
+            {"name": "Legal & Litigation", "description": "Legal and litigation risk", "code": "LIT"}
+        ]
+    }
+]

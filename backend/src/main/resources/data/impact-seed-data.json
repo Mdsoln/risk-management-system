@@ -1,0 +1,37 @@
+[
+    {
+        "severityRanking": "Insignificant",
+        "assessment": "Negative outcomes or missed opportunities that are likely to have a relatively negligible impact on the ability to meet objectives",
+        "score": 1,
+        "color": "#D3D3D3",
+        "colorName": "Light Grey"
+    },
+    {
+        "severityRanking": "Minor",
+        "assessment": "Negative outcomes or missed opportunities that are likely to have a relatively low impact on the ability to meet objectives.",
+        "score": 2,
+        "color": "#FFFF00",
+        "colorName": "Yellow"
+    },
+    {
+        "severityRanking": "Moderate",
+        "assessment": "Negative outcomes or missed opportunities that are likely to have a relatively moderate impact on the ability to meet objectives.",
+        "score": 3,
+        "color": "#FFA500",
+        "colorName": "Orange"
+    },
+    {
+        "severityRanking": "Major",
+        "assessment": "Negative outcomes or missed opportunities that are likely to have a relatively substantial impact on the ability to meet objectives.",
+        "score": 4,
+        "color": "#FF4500",
+        "colorName": "Orange Red"
+    },
+    {
+        "severityRanking": "Catastrophic",
+        "assessment": "Negative outcomes or missed opportunities that are of critical importance to the achievement of objectives.",
+        "score": 5,
+        "color": "#FF0000",
+        "colorName": "Red"
+    }
+]

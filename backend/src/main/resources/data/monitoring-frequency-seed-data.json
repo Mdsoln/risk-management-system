@@ -1,0 +1,44 @@
+[
+	{
+		"frequency": "Hourly",
+		"frequencyDescription": "Every hour.",
+		"code": "HOURLY",
+		"level": 0
+	},
+	{
+		"frequency": "Daily",
+		"frequencyDescription": "Every day.",
+		"code": "DAILY",
+		"level": 1
+	},
+	{
+		"frequency": "Weekly",
+		"frequencyDescription": "Every week.",
+		"code": "WEEKLY",
+		"level": 2
+	},
+	{
+		"frequency": "Monthly",
+		"frequencyDescription": "Every month.",
+		"code": "MONTHLY",
+		"level": 3
+	},
+	{
+		"frequency": "Quarterly",
+		"frequencyDescription": "Every three months.",
+		"code": "QUARTERLY",
+		"level": 4
+	},
+	{
+		"frequency": "Semi-annually",
+		"frequencyDescription": "Every six months.",
+		"code": "SEMIANNUALLY",
+		"level": 5
+	},
+	{
+		"frequency": "Annually",
+		"frequencyDescription": "Every Financial year.",
+		"code": "ANNUALLY",
+		"level": 6
+	}
+]

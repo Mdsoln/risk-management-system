@@ -1,0 +1,27 @@
+[
+    {
+        "code": "DG",
+        "name": "Director General",
+        "description": "Director General"
+    },
+    {
+        "code": "DIRECTOR",
+        "name": "Director",
+        "description": "Director"
+    },
+    {
+        "code": "MANAGER",
+        "name": "Manager",
+        "description": "Manager"
+    },
+    {
+        "code": "CHAMPION",
+        "name": "Champion",
+        "description": "Champion"
+    },
+    {
+        "code": "MEMBER",
+        "name": "Member",
+        "description": "Member"
+    }
+]

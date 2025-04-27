@@ -1,0 +1,130 @@
+.custom-table .ant-table-thead>tr>th {
+    color: black;
+    text-align: center;
+    padding: 8px;
+    /* Adjust padding for small size */
+}
+
+.custom-table .ant-table-tbody>tr>td {
+    text-align: center;
+    padding: 8px;
+    /* Adjust padding for small size */
+}
+
+.custom-header-left {
+    font-weight: bold;
+    text-align: left;
+    color: black;
+}
+
+.custom-header-center {
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+
+.custom-header-red {
+    background: #ff4d4f;
+    color: white;
+}
+
+.custom-header-amber {
+    background: #ffc107;
+    color: black;
+}
+
+.custom-header-green {
+    background: #28a745;
+    color: white;
+}
+
+.custom-cell-red {
+    color: black;
+}
+
+.custom-cell-amber {
+    color: black;
+}
+
+.custom-cell-green {
+    color: black;
+}
+
+.custom-index,
+.custom-indicator,
+.custom-measure,
+.custom-frequency,
+.custom-red,
+.custom-amber,
+.custom-green {
+    font-size: 12px;
+    padding: 8px;
+    /* Adjust padding for small size */
+}
+
+.custom-left {
+    text-align: left;
+}
+
+.description-content-table {
+    margin-top: 20px;
+}
+
+.description-title {
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #f8f9fa;
+    padding: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 100%;
+}
+
+.description-table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    width: auto;
+    /* Make the table width auto to fit content */
+    font-size: 12px;
+    /* Set the font size to 12px */
+    border: none;
+    /* Remove table borders */
+}
+
+.description-table th,
+.description-table td {
+    padding: 5px;
+    /* Reduced padding */
+    text-align: left;
+    background-color: #fafafa;
+    vertical-align: top;
+    word-wrap: break-word;
+    /* Ensure long words break to the next line */
+    white-space: normal;
+    /* Allow wrapping */
+    overflow: visible;
+    /* Show the overflow text */
+    border: none;
+    /* Remove cell borders */
+}
+
+.description-table th {
+    /* background-color: #f0f2f5; */
+    font-weight: 500;
+    text-overflow: ellipsis;
+    /* Add ellipsis if the text overflows */
+    position: relative;
+    /* Make sure the pseudo-element is positioned correctly */
+}
+
+.description-table th::after {
+    content: ':';
+    position: absolute;
+    right: 5px;
+    /* Adjust the position of the colon */
+}
+
+.description-table tr {
+    border-bottom: 1px solid #e8e8e8;
+    /* Add bottom border to each row */
+}

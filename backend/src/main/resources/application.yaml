@@ -1,0 +1,60 @@
+quarkus:
+  http:
+    port: 8080
+
+  log:
+    file:
+      enable: true
+      path: logs/app.log
+    console:
+      enable: true
+    category:
+      "io.quarkus.security": DEBUG
+      "io.smallrye.jwt": DEBUG
+      "io.smallrye.jwt.auth.principal": DEBUG
+      "org.hibernate.SQL": DEBUG
+      "org.hibernate.type.descriptor.sql.BasicBinder": TRACE
+
+  swagger-ui:
+    always-include: true
+    path: "/q/swagger-ui"
+    auth-url: "/auth/token"
+    bearer-token-enabled: true
+
+  datasource:
+    db-kind: postgresql
+    username: myuser
+    password: mypassword
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/mydatabase
+
+  hibernate-orm:
+    database:
+      generation: update
+
+  smallrye-json:
+    date-format: "yyyy-MM-dd'T'HH:mm:ss"
+
+  arc:
+    remove-unused-beans: false
+
+mp:
+  jwt:
+    verify:
+      issuer: http://localhost:8080/auth
+    groups:
+      path: groups  # this is for roles, but leave it here if you are using roles as well
+    path:
+      permissions: permissions  # this maps the "permissions" claim
+
+smallrye:
+  jwt:
+    sign:
+      key:
+        location: privateKey.pem
+    verify:
+      key:
+        location: publicKey.pem
+    always-check-authorization: true
+    path:
+      permissions: permissions  # Ensure this maps to the permissions claim in your JWT

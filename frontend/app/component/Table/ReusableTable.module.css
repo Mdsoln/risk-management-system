@@ -1,0 +1,14 @@
+/* Add this CSS to your styles.css or any CSS file included in your project */
+.rotate {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
