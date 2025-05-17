@@ -7,7 +7,7 @@ import tz.go.psssf.risk.dto.LikelihoodDTO;
 import tz.go.psssf.risk.entity.Likelihood;
 import tz.go.psssf.risk.pojo.LikelihoodPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface LikelihoodMapper {
     LikelihoodMapper INSTANCE = Mappers.getMapper(LikelihoodMapper.class);
 

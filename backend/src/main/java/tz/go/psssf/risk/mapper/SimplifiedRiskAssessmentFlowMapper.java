@@ -4,7 +4,7 @@ import org.mapstruct.*;
 import tz.go.psssf.risk.entity.RiskAssessmentFlow;
 import tz.go.psssf.risk.pojo.SimplifiedRiskAssessmentFlowPojo;
 
-@Mapper(componentModel = "cdi", uses = {
+@Mapper(componentModel = "jakarta", uses = {
     SimplifiedRiskAssessmentHistoryMapper.class,
     SimplifiedRiskAssessmentLevelMapper.class
 })

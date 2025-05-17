@@ -5,7 +5,7 @@ import tz.go.psssf.risk.dto.RiskActionPlanMonitoringDTO;
 import tz.go.psssf.risk.entity.RiskActionPlanMonitoring;
 import tz.go.psssf.risk.pojo.RiskActionPlanMonitoringPojo;
 
-@Mapper(componentModel = "cdi", uses = {
+@Mapper(componentModel = "jakarta", uses = {
     SimplifiedRiskActionPlanMapper.class
 })
 public interface RiskActionPlanMonitoringMapper {

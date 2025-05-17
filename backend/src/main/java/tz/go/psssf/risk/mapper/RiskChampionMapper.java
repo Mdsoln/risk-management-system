@@ -8,7 +8,7 @@
 //import tz.go.psssf.risk.entity.RiskChampion;
 //import tz.go.psssf.risk.pojo.RiskChampionPojo;
 //
-//@Mapper(componentModel = "cdi", uses = {DepartmentOwnerMapper.class})
+//@Mapper(componentModel = "jakarta", uses = {DepartmentOwnerMapper.class})
 //public interface RiskChampionMapper {
 //    RiskChampionMapper INSTANCE = Mappers.getMapper(RiskChampionMapper.class);
 //
@@ -42,7 +42,7 @@ import tz.go.psssf.risk.entity.User;
 import tz.go.psssf.risk.pojo.RiskChampionPojo;
 import tz.go.psssf.risk.repository.UserRepository;
 
-@Mapper(componentModel = "cdi", uses = {UserMapper.class})
+@Mapper(componentModel = "jakarta", uses = {UserMapper.class})
 public abstract class RiskChampionMapper {
 
     @Inject

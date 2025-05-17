@@ -5,7 +5,7 @@ import tz.go.psssf.risk.compliance.dto.*;
 import tz.go.psssf.risk.compliance.entity.*;
 import tz.go.psssf.risk.compliance.pojo.*;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface ComplianceEntityMapper {
     @Mapping(target = "categoryId", source = "category.id")
     ComplianceEntityDTO toDTO(ComplianceEntity entity);

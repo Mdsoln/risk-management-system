@@ -7,7 +7,7 @@ import tz.go.psssf.risk.dto.MeasurementDTO;
 import tz.go.psssf.risk.entity.Measurement;
 import tz.go.psssf.risk.pojo.MeasurementPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface MeasurementMapper {
     MeasurementMapper INSTANCE = Mappers.getMapper(MeasurementMapper.class);
 

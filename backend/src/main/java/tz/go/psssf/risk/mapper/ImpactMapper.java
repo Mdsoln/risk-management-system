@@ -7,7 +7,7 @@ import tz.go.psssf.risk.dto.ImpactDTO;
 import tz.go.psssf.risk.entity.Impact;
 import tz.go.psssf.risk.pojo.ImpactPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface ImpactMapper {
     ImpactMapper INSTANCE = Mappers.getMapper(ImpactMapper.class);
 

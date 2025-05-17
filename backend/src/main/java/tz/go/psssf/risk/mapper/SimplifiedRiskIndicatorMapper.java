@@ -5,7 +5,7 @@ import org.mapstruct.Mapping;
 import tz.go.psssf.risk.entity.RiskIndicator;
 import tz.go.psssf.risk.pojo.SimplifiedRiskIndicatorPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface SimplifiedRiskIndicatorMapper {
 
     @Mapping(target = "id", source = "id")

@@ -8,7 +8,7 @@ import org.mapstruct.factory.Mappers;
 import tz.go.psssf.risk.entity.RiskAreaCategory;
 import tz.go.psssf.risk.pojo.SimplifiedRiskAreaCategoryPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface SimplifiedRiskAreaCategoryMapper {
     SimplifiedRiskAreaCategoryMapper INSTANCE = Mappers.getMapper(SimplifiedRiskAreaCategoryMapper.class);
 

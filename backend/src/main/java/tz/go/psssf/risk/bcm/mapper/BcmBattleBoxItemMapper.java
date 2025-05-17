@@ -5,7 +5,7 @@ import tz.go.psssf.risk.bcm.dto.BcmBattleBoxItemDTO;
 import tz.go.psssf.risk.bcm.entity.BcmBattleBoxItem;
 import tz.go.psssf.risk.bcm.pojo.BcmBattleBoxItemPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface BcmBattleBoxItemMapper {
 
     BcmBattleBoxItemDTO toDTO(BcmBattleBoxItem item);

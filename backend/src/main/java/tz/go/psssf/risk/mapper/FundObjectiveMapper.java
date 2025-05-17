@@ -7,7 +7,7 @@ import tz.go.psssf.risk.dto.FundObjectiveDTO;
 import tz.go.psssf.risk.entity.FundObjective;
 import tz.go.psssf.risk.pojo.FundObjectivePojo;
 
-@Mapper(componentModel = "cdi", uses = {BusinessProcessMapper.class, DepartmentMapper.class})
+@Mapper(componentModel = "jakarta", uses = {BusinessProcessMapper.class, DepartmentMapper.class})
 public interface FundObjectiveMapper {
     FundObjectiveMapper INSTANCE = Mappers.getMapper(FundObjectiveMapper.class);
 

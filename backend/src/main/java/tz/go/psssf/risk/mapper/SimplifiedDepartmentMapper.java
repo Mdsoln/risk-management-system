@@ -6,7 +6,7 @@ import org.mapstruct.factory.Mappers;
 import tz.go.psssf.risk.entity.Department;
 import tz.go.psssf.risk.pojo.SimplifiedDepartmentPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface SimplifiedDepartmentMapper {
     SimplifiedDepartmentMapper INSTANCE = Mappers.getMapper(SimplifiedDepartmentMapper.class);
 

@@ -6,7 +6,7 @@ import tz.go.psssf.risk.bcm.dto.BcmDependencyDTO;
 import tz.go.psssf.risk.bcm.entity.BcmDependency;
 import tz.go.psssf.risk.bcm.pojo.BcmDependencyPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface BcmDependencyMapper {
 
     BcmDependencyDTO toDTO(BcmDependency dependency);

@@ -8,7 +8,7 @@ import tz.go.psssf.risk.dto.RiskRegistryDTO;
 import tz.go.psssf.risk.entity.RiskRegistry;
 import tz.go.psssf.risk.pojo.RiskRegistryPojo;
 
-@Mapper(componentModel = "cdi", uses = {RiskMapper.class})
+@Mapper(componentModel = "jakarta", uses = {RiskMapper.class})
 public interface RiskRegistryMapper {
     RiskRegistryMapper INSTANCE = Mappers.getMapper(RiskRegistryMapper.class);
 

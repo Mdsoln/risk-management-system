@@ -14,7 +14,7 @@ import tz.go.psssf.risk.entity.ControlIndicatorComparisonCondition;
 import tz.go.psssf.risk.entity.ControlIndicatorThreshold;
 import tz.go.psssf.risk.pojo.ControlIndicatorThresholdPojo;
 
-@Mapper(componentModel = "cdi", uses = {ControlIndicatorComparisonConditionMapper.class, ThresholdCategoryMapper.class})
+@Mapper(componentModel = "jakarta", uses = {ControlIndicatorComparisonConditionMapper.class, ThresholdCategoryMapper.class})
 public interface ControlIndicatorThresholdMapper {
     ControlIndicatorThresholdMapper INSTANCE = Mappers.getMapper(ControlIndicatorThresholdMapper.class);
 

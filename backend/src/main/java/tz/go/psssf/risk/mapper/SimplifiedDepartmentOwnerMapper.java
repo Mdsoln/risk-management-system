@@ -3,7 +3,7 @@ package tz.go.psssf.risk.mapper;
 import org.mapstruct.*;
 import tz.go.psssf.risk.pojo.SimplifiedDepartmentOwnerPojo;
 
-@Mapper(componentModel = "cdi", uses = {SimplifiedDepartmentMapper.class})
+@Mapper(componentModel = "jakarta", uses = {SimplifiedDepartmentMapper.class})
 public interface SimplifiedDepartmentOwnerMapper {
 
 //    @Mapping(target = "department.id", source = "department.id")

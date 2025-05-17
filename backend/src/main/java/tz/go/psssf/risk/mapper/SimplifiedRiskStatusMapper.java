@@ -4,7 +4,7 @@ import org.mapstruct.*;
 import tz.go.psssf.risk.entity.RiskStatus;
 import tz.go.psssf.risk.pojo.SimplifiedRiskStatusPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface SimplifiedRiskStatusMapper {
 
     SimplifiedRiskStatusPojo toPojo(RiskStatus entity);

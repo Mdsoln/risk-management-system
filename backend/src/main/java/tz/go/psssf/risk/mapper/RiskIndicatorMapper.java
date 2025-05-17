@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Mapper(componentModel = "cdi", uses = {
+@Mapper(componentModel = "jakarta", uses = {
     SimplifiedRiskMapper.class,
     MonitoringFrequencyMapper.class,
     MeasurementMapper.class,
@@ -79,7 +79,7 @@ public interface RiskIndicatorMapper {
                                 monitoring.setStartDatetime(LocalDateTime.parse(monitoringDTO.getStartDatetime()));
                                 monitoring.setEndDatetime(LocalDateTime.parse(monitoringDTO.getEndDatetime()));
                                 monitoring.setValue(monitoringDTO.getValue());
-                                
+
                                 Measurement measurement = new Measurement();
                                 measurement.setId(monitoringDTO.getMeasurementId());
                                 monitoring.setMeasurement(measurement);

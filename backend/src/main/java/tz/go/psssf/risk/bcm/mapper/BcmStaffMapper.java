@@ -5,7 +5,7 @@ import tz.go.psssf.risk.bcm.dto.BcmStaffDTO;
 import tz.go.psssf.risk.bcm.entity.BcmStaff;
 import tz.go.psssf.risk.bcm.pojo.BcmStaffPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface BcmStaffMapper {
 
     BcmStaffDTO toDTO(BcmStaff staff);

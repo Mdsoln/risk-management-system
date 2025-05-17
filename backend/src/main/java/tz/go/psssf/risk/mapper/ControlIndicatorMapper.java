@@ -15,7 +15,7 @@ import tz.go.psssf.risk.entity.ControlIndicatorThreshold;
 import tz.go.psssf.risk.entity.ThresholdCategory;
 import tz.go.psssf.risk.pojo.ControlIndicatorPojo;
 
-@Mapper(componentModel = "cdi", uses = {
+@Mapper(componentModel = "jakarta", uses = {
     MonitoringFrequencyMapper.class,
     MeasurementMapper.class,
     ControlIndicatorThresholdMapper.class,

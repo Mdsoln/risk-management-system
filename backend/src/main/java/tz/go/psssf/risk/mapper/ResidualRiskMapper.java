@@ -8,7 +8,7 @@ import tz.go.psssf.risk.dto.ResidualRiskDTO;
 import tz.go.psssf.risk.entity.ResidualRisk;
 import tz.go.psssf.risk.pojo.ResidualRiskPojo;
 
-@Mapper(componentModel = "cdi", uses = {LikelihoodMapper.class, ImpactMapper.class})
+@Mapper(componentModel = "jakarta", uses = {LikelihoodMapper.class, ImpactMapper.class})
 public interface ResidualRiskMapper {
     ResidualRiskMapper INSTANCE = Mappers.getMapper(ResidualRiskMapper.class);
 

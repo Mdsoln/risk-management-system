@@ -6,11 +6,11 @@ import tz.go.psssf.risk.dto.RiskAssessmentHistoryDTO;
 import tz.go.psssf.risk.entity.RiskAssessmentHistory;
 import tz.go.psssf.risk.pojo.RiskAssessmentHistoryPojo;
 
-@Mapper(componentModel = "cdi", uses = {
+@Mapper(componentModel = "jakarta", uses = {
     RiskStatusMapper.class,
     RiskChampionMapper.class,
 //    DepartmentOwnerMapper.class,
-    RiskAssessmentFlowMapper.class,
+    MinimalRiskAssessmentFlowMapper.class,
     RiskAssessmentLevelMapper.class
 })
 public interface RiskAssessmentHistoryMapper {

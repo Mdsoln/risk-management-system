@@ -9,7 +9,7 @@ import tz.go.psssf.risk.dto.RiskAreaCategoryDTO;
 import tz.go.psssf.risk.entity.RiskAreaCategory;
 import tz.go.psssf.risk.pojo.RiskAreaCategoryPojo;
 
-@Mapper(componentModel = "cdi", uses = {SimplifiedRiskAreaMapper.class})
+@Mapper(componentModel = "jakarta", uses = {SimplifiedRiskAreaMapper.class})
 public interface RiskAreaCategoryMapper {
     RiskAreaCategoryMapper INSTANCE = Mappers.getMapper(RiskAreaCategoryMapper.class);
 

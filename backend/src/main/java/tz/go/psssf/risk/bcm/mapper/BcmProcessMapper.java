@@ -6,7 +6,7 @@ import tz.go.psssf.risk.bcm.dto.BcmProcessDTO;
 import tz.go.psssf.risk.bcm.entity.BcmProcess;
 import tz.go.psssf.risk.bcm.pojo.BcmProcessPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface BcmProcessMapper {
 
     @Mapping(target = "departmentId", source = "department.id")

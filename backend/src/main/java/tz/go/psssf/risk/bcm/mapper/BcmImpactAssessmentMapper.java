@@ -6,7 +6,7 @@ import tz.go.psssf.risk.bcm.dto.BcmImpactAssessmentDTO;
 import tz.go.psssf.risk.bcm.entity.BcmImpactAssessment;
 import tz.go.psssf.risk.bcm.pojo.BcmImpactAssessmentPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface BcmImpactAssessmentMapper {
 
     BcmImpactAssessmentDTO toDTO(BcmImpactAssessment impactAssessment);

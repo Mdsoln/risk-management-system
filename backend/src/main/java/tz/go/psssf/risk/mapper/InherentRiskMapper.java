@@ -8,7 +8,7 @@ import tz.go.psssf.risk.dto.InherentRiskDTO;
 import tz.go.psssf.risk.entity.InherentRisk;
 import tz.go.psssf.risk.pojo.InherentRiskPojo;
 
-@Mapper(componentModel = "cdi", uses = {LikelihoodMapper.class, ImpactMapper.class})
+@Mapper(componentModel = "jakarta", uses = {LikelihoodMapper.class, ImpactMapper.class})
 public interface InherentRiskMapper {
     InherentRiskMapper INSTANCE = Mappers.getMapper(InherentRiskMapper.class);
 

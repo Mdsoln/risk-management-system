@@ -5,7 +5,7 @@ import tz.go.psssf.risk.bcm.dto.BcmResourceAcquisitionDTO;
 import tz.go.psssf.risk.bcm.entity.BcmResourceAcquisition;
 import tz.go.psssf.risk.bcm.pojo.BcmResourceAcquisitionPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface BcmResourceAcquisitionMapper {
 
     BcmResourceAcquisitionDTO toDTO(BcmResourceAcquisition entity);

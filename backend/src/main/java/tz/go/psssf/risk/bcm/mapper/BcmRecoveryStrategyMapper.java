@@ -6,7 +6,7 @@ import tz.go.psssf.risk.bcm.dto.BcmRecoveryStrategyDTO;
 import tz.go.psssf.risk.bcm.entity.BcmRecoveryStrategy;
 import tz.go.psssf.risk.bcm.pojo.BcmRecoveryStrategyPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface BcmRecoveryStrategyMapper {
 
     @Mapping(target = "dependencyId", source = "dependency.id")

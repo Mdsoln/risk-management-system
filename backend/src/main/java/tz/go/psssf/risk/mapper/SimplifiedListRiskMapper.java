@@ -3,7 +3,7 @@ import org.mapstruct.Mapper;
 import tz.go.psssf.risk.entity.Risk;
 import tz.go.psssf.risk.pojo.SimplifiedListRiskPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface SimplifiedListRiskMapper {
     SimplifiedListRiskPojo toPojo(Risk risk);
 }

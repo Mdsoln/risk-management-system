@@ -8,7 +8,7 @@ import tz.go.psssf.risk.dto.BusinessProcessDTO;
 import tz.go.psssf.risk.entity.BusinessProcess;
 import tz.go.psssf.risk.pojo.BusinessProcessPojo;
 
-@Mapper(componentModel = "cdi", uses = {FundObjectiveMapper.class, DepartmentMapper.class})
+@Mapper(componentModel = "jakarta", uses = {FundObjectiveMapper.class, DepartmentMapper.class})
 public interface BusinessProcessMapper {
     BusinessProcessMapper INSTANCE = Mappers.getMapper(BusinessProcessMapper.class);
 

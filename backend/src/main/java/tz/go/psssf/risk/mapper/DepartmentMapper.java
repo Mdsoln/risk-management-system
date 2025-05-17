@@ -7,7 +7,7 @@ import tz.go.psssf.risk.dto.DepartmentDTO;
 import tz.go.psssf.risk.entity.Department;
 import tz.go.psssf.risk.pojo.DepartmentPojo;
 
-@Mapper(componentModel = "cdi", uses = {UserMapper.class})
+@Mapper(componentModel = "jakarta", uses = {UserMapper.class})
 public interface DepartmentMapper {
     DepartmentMapper INSTANCE = Mappers.getMapper(DepartmentMapper.class);
 
@@ -21,5 +21,5 @@ public interface DepartmentMapper {
 
     Department toEntity(DepartmentPojo pojo);
 
-   
+
 }

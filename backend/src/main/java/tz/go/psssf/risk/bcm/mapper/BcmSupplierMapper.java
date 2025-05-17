@@ -5,7 +5,7 @@ import tz.go.psssf.risk.bcm.dto.BcmSupplierDTO;
 import tz.go.psssf.risk.bcm.entity.BcmSupplier;
 import tz.go.psssf.risk.bcm.pojo.BcmSupplierPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface BcmSupplierMapper {
 
     BcmSupplierDTO toDTO(BcmSupplier supplier);

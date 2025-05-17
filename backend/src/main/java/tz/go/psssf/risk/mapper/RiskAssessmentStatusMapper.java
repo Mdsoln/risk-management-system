@@ -5,7 +5,7 @@ import tz.go.psssf.risk.dto.RiskAssessmentStatusDTO;
 import tz.go.psssf.risk.entity.RiskAssessmentStatus;
 import tz.go.psssf.risk.pojo.SimplifiedRiskAssessmentStatusPojo;
 
-@Mapper(componentModel = "cdi", uses = {
+@Mapper(componentModel = "jakarta", uses = {
     SimplifiedRiskStatusMapper.class,
     SimplifiedRiskAssessmentFlowMapper.class
 })

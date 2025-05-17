@@ -9,7 +9,7 @@ import tz.go.psssf.risk.dto.ComparisonConditionDTO;
 import tz.go.psssf.risk.entity.RiskIndicatorComparisonCondition;
 import tz.go.psssf.risk.pojo.ComparisonConditionPojo;
 
-@Mapper(componentModel = "cdi", uses = {ComparisonOperatorMapper.class})
+@Mapper(componentModel = "jakarta", uses = {ComparisonOperatorMapper.class})
 public interface RiskIndicatorComparisonConditionMapper {
     RiskIndicatorComparisonConditionMapper INSTANCE = Mappers.getMapper(RiskIndicatorComparisonConditionMapper.class);
 

@@ -4,7 +4,7 @@ import org.mapstruct.*;
 import tz.go.psssf.risk.entity.RiskChampion;
 import tz.go.psssf.risk.pojo.SimplifiedRiskChampionPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface SimplifiedRiskChampionMapper {
     SimplifiedRiskChampionPojo toPojo(RiskChampion entity);
     RiskChampion toEntity(SimplifiedRiskChampionPojo pojo);

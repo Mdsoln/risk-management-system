@@ -6,7 +6,7 @@ import tz.go.psssf.risk.dto.RiskAssessmentLevelDTO;
 import tz.go.psssf.risk.entity.RiskAssessmentLevel;
 import tz.go.psssf.risk.pojo.RiskAssessmentLevelPojo;
 
-@Mapper(componentModel = "cdi", uses = {SimplifiedRiskAssessmentFlowMapper.class})
+@Mapper(componentModel = "jakarta", uses = {SimplifiedRiskAssessmentFlowMapper.class})
 public interface RiskAssessmentLevelMapper {
 
     RiskAssessmentLevelMapper INSTANCE = Mappers.getMapper(RiskAssessmentLevelMapper.class);

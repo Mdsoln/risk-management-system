@@ -5,7 +5,7 @@ import tz.go.psssf.risk.compliance.dto.RegulatoryComplianceMatrixDTO;
 import tz.go.psssf.risk.compliance.entity.RegulatoryComplianceMatrix;
 import tz.go.psssf.risk.compliance.pojo.RegulatoryComplianceMatrixPojo;
 
-@Mapper(componentModel = "cdi", uses = {RegulatoryComplianceMatrixSectionMapper.class})
+@Mapper(componentModel = "jakarta", uses = {RegulatoryComplianceMatrixSectionMapper.class})
 public interface RegulatoryComplianceMatrixMapper {
 
     // Mapping to DTO
@@ -24,4 +24,3 @@ public interface RegulatoryComplianceMatrixMapper {
     // Update Entity from DTO
     void updateEntityFromDTO(RegulatoryComplianceMatrixDTO dto, @MappingTarget RegulatoryComplianceMatrix entity);
 }
-

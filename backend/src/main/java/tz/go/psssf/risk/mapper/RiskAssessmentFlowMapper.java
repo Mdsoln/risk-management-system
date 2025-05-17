@@ -8,7 +8,7 @@ import tz.go.psssf.risk.pojo.RiskAssessmentFlowPojo;
 import tz.go.psssf.risk.pojo.SimplifiedRiskAssessmentFlowPojo;
 import tz.go.psssf.risk.pojo.SimplifiedRiskAssessmentStatusPojo;
 
-@Mapper(componentModel = "cdi", uses = {
+@Mapper(componentModel = "jakarta", uses = {
     RiskAssessmentHistoryMapper.class,
     RiskAssessmentLevelMapper.class,
     RiskAssessmentStatusMapper.class, // Use the primary mapper here

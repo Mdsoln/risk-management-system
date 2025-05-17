@@ -5,7 +5,7 @@ import org.mapstruct.factory.Mappers;
 import tz.go.psssf.risk.entity.FundObjective;
 import tz.go.psssf.risk.pojo.SimplifiedFundObjectivePojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface SimplifiedFundObjectiveMapper {
     SimplifiedFundObjectiveMapper INSTANCE = Mappers.getMapper(SimplifiedFundObjectiveMapper.class);
 

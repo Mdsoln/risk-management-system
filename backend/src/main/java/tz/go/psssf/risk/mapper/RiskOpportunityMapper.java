@@ -8,7 +8,7 @@ import tz.go.psssf.risk.dto.RiskOpportunityDTO;
 import tz.go.psssf.risk.entity.RiskOpportunity;
 import tz.go.psssf.risk.pojo.RiskOpportunityPojo;
 
-@Mapper(componentModel = "cdi", uses = {RiskMapper.class})
+@Mapper(componentModel = "jakarta", uses = {RiskMapper.class})
 public interface RiskOpportunityMapper {
     RiskOpportunityMapper INSTANCE = Mappers.getMapper(RiskOpportunityMapper.class);
 

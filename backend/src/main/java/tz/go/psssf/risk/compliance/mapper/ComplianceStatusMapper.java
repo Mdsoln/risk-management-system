@@ -5,7 +5,7 @@ import tz.go.psssf.risk.compliance.dto.ComplianceStatusDTO;
 import tz.go.psssf.risk.compliance.entity.ComplianceStatus;
 import tz.go.psssf.risk.compliance.pojo.ComplianceStatusPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface ComplianceStatusMapper {
 
     // Map Entity to DTO

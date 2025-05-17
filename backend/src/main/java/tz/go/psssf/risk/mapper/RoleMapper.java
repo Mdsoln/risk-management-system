@@ -5,7 +5,7 @@ import tz.go.psssf.risk.entity.Role;
 import tz.go.psssf.risk.pojo.RolePojo;
 import tz.go.psssf.risk.dto.RoleDTO;
 
-@Mapper(componentModel = "cdi", uses = { PermissionMapper.class })
+@Mapper(componentModel = "jakarta", uses = { PermissionMapper.class })
 public interface RoleMapper {
 
     @Mapping(target = "permissions", source = "permissions")

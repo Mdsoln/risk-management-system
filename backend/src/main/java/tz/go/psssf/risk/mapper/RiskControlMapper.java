@@ -10,7 +10,7 @@ import tz.go.psssf.risk.pojo.RiskControlPojo;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Mapper(componentModel = "cdi", uses = {
+@Mapper(componentModel = "jakarta", uses = {
 //    DepartmentOwnerMapper.class,
     ControlIndicatorMapper.class
 })

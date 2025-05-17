@@ -5,7 +5,7 @@ import tz.go.psssf.risk.compliance.entity.*;
 import tz.go.psssf.risk.compliance.pojo.*;
 
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface SimplifiedComplianceEntityMapper {
     SimplifiedComplianceEntityPojo toPojo(ComplianceEntity entity);
 }

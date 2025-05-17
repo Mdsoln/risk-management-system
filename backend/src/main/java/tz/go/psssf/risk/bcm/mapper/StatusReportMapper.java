@@ -5,7 +5,7 @@ import tz.go.psssf.risk.bcm.dto.StatusReportDTO;
 import tz.go.psssf.risk.bcm.entity.StatusReport;
 import tz.go.psssf.risk.bcm.pojo.StatusReportPojo;
 
-//@Mapper(componentModel = "cdi")
+//@Mapper(componentModel = "jakarta")
 //public interface StatusReportMapper {
 //
 //    StatusReportDTO toDTO(StatusReport statusReport);
@@ -18,7 +18,7 @@ import tz.go.psssf.risk.bcm.pojo.StatusReportPojo;
 //    void updateEntityFromDTO(StatusReportDTO dto, @MappingTarget StatusReport entity);
 //}
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface StatusReportMapper {
 
     @Mapping(target = "departmentId", source = "department.id") // Map department ID

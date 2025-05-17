@@ -7,7 +7,7 @@ import tz.go.psssf.risk.compliance.dto.ComplianceDocumentCategoryDTO;
 import tz.go.psssf.risk.compliance.entity.ComplianceDocumentCategory;
 import tz.go.psssf.risk.compliance.pojo.ComplianceDocumentCategoryPojo;
 
-//@Mapper(componentModel = "cdi")
+//@Mapper(componentModel = "jakarta")
 //public interface ComplianceDocumentCategoryMapper {
 //
 //    ComplianceDocumentCategoryPojo toPojo(ComplianceDocumentCategory entity);
@@ -18,7 +18,7 @@ import tz.go.psssf.risk.compliance.pojo.ComplianceDocumentCategoryPojo;
 //    void updateEntityFromDTO(ComplianceDocumentCategoryDTO dto, @MappingTarget ComplianceDocumentCategory entity);
 //}
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface ComplianceDocumentCategoryMapper {
 
     ComplianceDocumentCategoryPojo toPojo(ComplianceDocumentCategory entity);
@@ -30,4 +30,3 @@ public interface ComplianceDocumentCategoryMapper {
     @Mapping(target = "id", ignore = true) // Ignore ID mapping to prevent override
     void updateEntityFromDTO(ComplianceDocumentCategoryDTO dto, @MappingTarget ComplianceDocumentCategory entity);
 }
-

@@ -9,7 +9,7 @@ import tz.go.psssf.risk.pojo.RiskIndicatorActionPlanMonitoringPojo;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-@Mapper(componentModel = "cdi", uses = {
+@Mapper(componentModel = "jakarta", uses = {
     MeasurementMapper.class // Include the Measurement Mapper
 })
 public interface RiskIndicatorActionPlanMonitoringMapper {

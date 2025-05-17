@@ -4,7 +4,7 @@ import org.mapstruct.*;
 import tz.go.psssf.risk.entity.RiskActionPlan;
 import tz.go.psssf.risk.pojo.SimplifiedRiskActionPlanPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface SimplifiedRiskActionPlanMapper {
 
     @Mapping(source = "id", target = "id")

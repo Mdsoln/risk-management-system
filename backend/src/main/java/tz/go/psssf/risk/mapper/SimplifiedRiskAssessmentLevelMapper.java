@@ -4,7 +4,7 @@ import org.mapstruct.*;
 import tz.go.psssf.risk.entity.RiskAssessmentLevel;
 import tz.go.psssf.risk.pojo.SimplifiedRiskAssessmentLevelPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface SimplifiedRiskAssessmentLevelMapper {
 
     SimplifiedRiskAssessmentLevelPojo toPojo(RiskAssessmentLevel entity);

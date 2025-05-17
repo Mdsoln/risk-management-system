@@ -7,7 +7,7 @@ import tz.go.psssf.risk.dto.MonitoringFrequencyDTO;
 import tz.go.psssf.risk.entity.MonitoringFrequency;
 import tz.go.psssf.risk.pojo.MonitoringFrequencyPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface MonitoringFrequencyMapper {
     MonitoringFrequencyMapper INSTANCE = Mappers.getMapper(MonitoringFrequencyMapper.class);
 

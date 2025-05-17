@@ -5,7 +5,7 @@ import tz.go.psssf.risk.bcm.dto.BcmUrgentResourceDTO;
 import tz.go.psssf.risk.bcm.entity.BcmUrgentResource;
 import tz.go.psssf.risk.bcm.pojo.BcmUrgentResourcePojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface BcmUrgentResourceMapper {
 
     BcmUrgentResourceDTO toDTO(BcmUrgentResource resource);

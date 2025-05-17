@@ -7,7 +7,7 @@ import tz.go.psssf.risk.dto.ThresholdCategoryDTO;
 import tz.go.psssf.risk.entity.ThresholdCategory;
 import tz.go.psssf.risk.pojo.ThresholdCategoryPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface ThresholdCategoryMapper {
     ThresholdCategoryMapper INSTANCE = Mappers.getMapper(ThresholdCategoryMapper.class);
 

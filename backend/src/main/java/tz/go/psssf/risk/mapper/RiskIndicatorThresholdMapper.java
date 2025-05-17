@@ -9,7 +9,7 @@ import tz.go.psssf.risk.dto.RiskIndicatorThresholdDTO;
 import tz.go.psssf.risk.entity.RiskIndicatorThreshold;
 import tz.go.psssf.risk.pojo.RiskIndicatorThresholdPojo;
 
-@Mapper(componentModel = "cdi", uses = {RiskIndicatorComparisonConditionMapper.class, ThresholdCategoryMapper.class})
+@Mapper(componentModel = "jakarta", uses = {RiskIndicatorComparisonConditionMapper.class, ThresholdCategoryMapper.class})
 public interface RiskIndicatorThresholdMapper {
     RiskIndicatorThresholdMapper INSTANCE = Mappers.getMapper(RiskIndicatorThresholdMapper.class);
 

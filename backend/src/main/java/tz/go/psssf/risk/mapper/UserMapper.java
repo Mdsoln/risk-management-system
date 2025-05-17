@@ -6,7 +6,7 @@ import tz.go.psssf.risk.entity.User;
 import tz.go.psssf.risk.pojo.ProfileDetailsPojo;
 import tz.go.psssf.risk.pojo.UserPojo;
 
-@Mapper(componentModel = "cdi", uses = {
+@Mapper(componentModel = "jakarta", uses = {
     RoleMapper.class,
     DepartmentMapper.class,
     //UserTypeMapper.class 

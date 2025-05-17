@@ -6,7 +6,7 @@ import tz.go.psssf.risk.compliance.dto.ComplianceEntityCategoryDTO;
 import tz.go.psssf.risk.compliance.entity.ComplianceEntityCategory;
 import tz.go.psssf.risk.compliance.pojo.ComplianceEntityCategoryPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface ComplianceEntityCategoryMapper {
 
     // Convert Entity to Pojo

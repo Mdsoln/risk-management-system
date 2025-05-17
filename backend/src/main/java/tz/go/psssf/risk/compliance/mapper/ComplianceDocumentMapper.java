@@ -5,7 +5,7 @@ import tz.go.psssf.risk.compliance.dto.ComplianceDocumentDTO;
 import tz.go.psssf.risk.compliance.entity.ComplianceDocument;
 import tz.go.psssf.risk.compliance.pojo.ComplianceDocumentPojo;
 
-@Mapper(componentModel = "cdi", uses = RegulatoryComplianceMatrixMapper.class) // Use the other mapper
+@Mapper(componentModel = "jakarta", uses = RegulatoryComplianceMatrixMapper.class) // Use the other mapper
 public interface ComplianceDocumentMapper {
 
     // Mapping to DTO

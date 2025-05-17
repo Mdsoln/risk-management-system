@@ -9,7 +9,7 @@ import tz.go.psssf.risk.pojo.RiskActionPlanPojo;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Mapper(componentModel = "cdi", uses = {
+@Mapper(componentModel = "jakarta", uses = {
     RiskActionPlanMonitoringMapper.class
 })
 public interface RiskActionPlanMapper {

@@ -4,7 +4,7 @@ import org.mapstruct.Mapper;
 import tz.go.psssf.risk.entity.UserType;
 import tz.go.psssf.risk.pojo.UserTypePojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface UserTypeMapper {
 
     UserTypePojo toPojo(UserType userType);

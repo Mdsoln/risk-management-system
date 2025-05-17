@@ -7,7 +7,7 @@ import tz.go.psssf.risk.entity.Department;
 import tz.go.psssf.risk.pojo.RiskOwnerPojo;
 import tz.go.psssf.risk.pojo.RiskDepartmentOwnerPojo;
 
-@Mapper(componentModel = "cdi", uses = {UserMapper.class})
+@Mapper(componentModel = "jakarta", uses = {UserMapper.class})
 public interface RiskOwnerMapper {
     
     RiskOwnerMapper INSTANCE = Mappers.getMapper(RiskOwnerMapper.class);

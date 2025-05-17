@@ -7,7 +7,7 @@ import org.mapstruct.factory.Mappers;
 import tz.go.psssf.risk.entity.BusinessProcess;
 import tz.go.psssf.risk.pojo.SimplifiedBusinessProcessPojo;
 
-@Mapper(componentModel = "cdi", uses = { SimplifiedFundObjectiveMapper.class, SimplifiedDepartmentMapper.class }) // Update uses attribute
+@Mapper(componentModel = "jakarta", uses = { SimplifiedFundObjectiveMapper.class, SimplifiedDepartmentMapper.class }) // Update uses attribute
 public interface SimplifiedBusinessProcessMapper {
     SimplifiedBusinessProcessMapper INSTANCE = Mappers.getMapper(SimplifiedBusinessProcessMapper.class);
 

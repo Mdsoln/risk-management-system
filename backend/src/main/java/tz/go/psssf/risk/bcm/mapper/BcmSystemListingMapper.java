@@ -5,7 +5,7 @@ import tz.go.psssf.risk.bcm.dto.BcmSystemListingDTO;
 import tz.go.psssf.risk.bcm.entity.BcmSystemListing;
 import tz.go.psssf.risk.bcm.pojo.BcmSystemListingPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface BcmSystemListingMapper {
 
     BcmSystemListingDTO toDTO(BcmSystemListing entity);

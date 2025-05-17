@@ -6,7 +6,7 @@ import tz.go.psssf.risk.dto.ComparisonOperatorDTO;
 import tz.go.psssf.risk.entity.ComparisonOperator;
 import tz.go.psssf.risk.pojo.ComparisonOperatorPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface ComparisonOperatorMapper {
 
     ComparisonOperatorDTO toDTO(ComparisonOperator comparisonOperator);

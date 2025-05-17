@@ -6,7 +6,7 @@ import org.mapstruct.factory.Mappers;
 import tz.go.psssf.risk.entity.Directorate;
 import tz.go.psssf.risk.pojo.DirectoratePojo;
 
-@Mapper(componentModel = "cdi", uses = { DepartmentMapper.class })
+@Mapper(componentModel = "jakarta", uses = { DepartmentMapper.class })
 public interface DirectorateMapper {
     DirectorateMapper INSTANCE = Mappers.getMapper(DirectorateMapper.class);
 

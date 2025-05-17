@@ -5,7 +5,7 @@ import tz.go.psssf.risk.entity.Permission;
 import tz.go.psssf.risk.pojo.PermissionPojo;
 import tz.go.psssf.risk.dto.PermissionDTO;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface PermissionMapper {
 
     PermissionPojo toPojo(Permission permission);

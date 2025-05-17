@@ -23,8 +23,8 @@ quarkus:
 
   datasource:
     db-kind: postgresql
-    username: myuser
-    password: mypassword
+    username: postgres
+    password: mdsoln
     jdbc:
       url: jdbc:postgresql://localhost:5432/mydatabase
 

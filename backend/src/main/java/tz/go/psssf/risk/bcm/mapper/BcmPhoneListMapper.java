@@ -5,7 +5,7 @@ import tz.go.psssf.risk.bcm.dto.BcmPhoneListDTO;
 import tz.go.psssf.risk.bcm.entity.BcmPhoneList;
 import tz.go.psssf.risk.bcm.pojo.BcmPhoneListPojo;
 
-@Mapper(componentModel = "cdi")
+@Mapper(componentModel = "jakarta")
 public interface BcmPhoneListMapper {
 
     BcmPhoneListDTO toDTO(BcmPhoneList phoneList);
