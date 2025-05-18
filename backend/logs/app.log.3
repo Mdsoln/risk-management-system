@@ -1,341 +1,145 @@
-2024-12-31 06:03:23,300 nurdin-mbp risk-management-system-dev.jar[56164] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.log.category."org.hibernate.type.descriptor.sql.BasicBinder"" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2024-12-31 06:03:23,301 nurdin-mbp risk-management-system-dev.jar[56164] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.log.category."io.quarkus.security"" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2024-12-31 06:03:23,301 nurdin-mbp risk-management-system-dev.jar[56164] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.log.category."org.hibernate.SQL"" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2024-12-31 06:03:23,301 nurdin-mbp risk-management-system-dev.jar[56164] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.log.category."io.smallrye.jwt.auth.principal"" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2024-12-31 06:03:23,301 nurdin-mbp risk-management-system-dev.jar[56164] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.log.category."io.smallrye.jwt"" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2024-12-31 06:03:23,301 nurdin-mbp risk-management-system-dev.jar[56164] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.swagger-ui.auth-url" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2024-12-31 06:03:23,301 nurdin-mbp risk-management-system-dev.jar[56164] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.smallrye-json.date-format" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2024-12-31 06:03:23,301 nurdin-mbp risk-management-system-dev.jar[56164] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.swagger-ui.bearer-token-enabled" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
-2024-12-31 06:03:23,821 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.workflow.entity.WorkflowLevel
-2024-12-31 06:03:23,821 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.ResidualRisk
-2024-12-31 06:03:23,821 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskAssessmentHistory
-2024-12-31 06:03:23,821 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.compliance.entity.ComplianceDocumentCategory
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskRegistry
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.workflow.entity.EntityType
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskIndicatorThreshold
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.compliance.entity.ComplianceStatus
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.BusinessProcess
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Permission
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskActionPlanMonitoring
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskAssessmentFlow
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.SubCategory
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Likelihood
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.ComparisonOperator
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskOpportunity
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.ThresholdCategory
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskIndicatorComparisonCondition
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Department
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskActionPlan
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.compliance.entity.RegulatoryComplianceMatrixSection
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.MonitoringFrequency
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskStatus
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.compliance.entity.ComplianceEntityCategory
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.workflow.entity.WorkflowStatusType
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Directorate
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.workflow.entity.Workflow
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.compliance.entity.ComplianceEntity
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskAssessmentLevel
-2024-12-31 06:03:23,822 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Impact
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.ControlIndicator
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.User
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.ControlIndicatorThreshold
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Risk
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.workflow.entity.WorkflowLog
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskAssessmentStatus
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskArea
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.workflow.entity.WorkflowStatus
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.workflow.entity.WorkflowEntity
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskChampion
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskCause
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskAreaCategory
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskIndicator
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.compliance.entity.RegulatoryComplianceMatrix
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Measurement
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Category
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.InherentRisk
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskIndicatorActionPlan
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.ControlIndicatorComparisonCondition
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskOwner
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskIndicatorActionPlanMonitoring
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.FundObjective
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Role
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.StatusType
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.UserType
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.compliance.entity.ComplianceDocument
-2024-12-31 06:03:23,823 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskControl
-2024-12-31 06:03:25,560 nurdin-mbp risk-management-system-dev.jar[56164] ERROR [org.hib.met.int.MetadataContext] (JPA Startup Thread) HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
-2024-12-31 06:03:26,240 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
-2024-12-31 06:03:26,241 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
-2024-12-31 06:03:26,241 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
-2024-12-31 06:03:26,242 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
-2024-12-31 06:03:26,242 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################  START SEED ################################
-2024-12-31 06:03:26,243 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
-2024-12-31 06:03:26,243 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
-2024-12-31 06:03:26,243 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
-2024-12-31 06:03:26,243 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
-2024-12-31 06:03:26,243 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
-2024-12-31 06:03:26,243 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
-2024-12-31 06:03:26,244 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
-2024-12-31 06:03:26,244 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################  END SEED ################################
-2024-12-31 06:03:26,244 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
-2024-12-31 06:03:26,244 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
-2024-12-31 06:03:26,244 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
-2024-12-31 06:03:26,289 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [io.quarkus] (Quarkus Main Thread) risk-management-system 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.10.2) started in 4.580s. Listening on: http://localhost:8080
-2024-12-31 06:03:26,289 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2024-12-31 06:03:26,289 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, config-yaml, hibernate-envers, hibernate-orm, hibernate-orm-panache, hibernate-orm-rest-data-panache, hibernate-validator, jdbc-postgresql, narayana-jta, rest, rest-jackson, rest-links, security, security-jpa, smallrye-context-propagation, smallrye-jwt, smallrye-openapi, swagger-ui, vertx]
-2024-12-31 06:03:31,517 nurdin-mbp risk-management-system-dev.jar[56164] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (executor-thread-1) SQL Error: 0, SQLState: 23503
-2024-12-31 06:03:31,517 nurdin-mbp risk-management-system-dev.jar[56164] ERROR [org.hib.eng.jdb.spi.SqlExceptionHelper] (executor-thread-1) ERROR: update or delete on table "regulatory_compliance_matrix" violates foreign key constraint "fk1lkds2dnujuifh77yy063blhk" on table "regulatory_compliance_matrix_section"
-  Detail: Key (id)=(f56b0988-e98e-4f99-9c2f-d83e9bf1759c) is still referenced from table "regulatory_compliance_matrix_section".
-2024-12-31 06:03:31,519 nurdin-mbp risk-management-system-dev.jar[56164] WARN  [com.arj.ats.arjuna] (executor-thread-1) ARJUNA012125: TwoPhaseCoordinator.beforeCompletion - failed for SynchronizationImple< 0:ffffc0a801a5:f164:67735efe:2, org.hibernate.resource.transaction.backend.jta.internal.synchronization.RegisteredSynchronization@22986111 >: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: update or delete on table "regulatory_compliance_matrix" violates foreign key constraint "fk1lkds2dnujuifh77yy063blhk" on table "regulatory_compliance_matrix_section"
-  Detail: Key (id)=(f56b0988-e98e-4f99-9c2f-d83e9bf1759c) is still referenced from table "regulatory_compliance_matrix_section".] [delete from regulatory_compliance_matrix where id=?]
-	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:97)
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
-	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:108)
-	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:40)
-	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:52)
-	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.doStaticDelete(AbstractDeleteCoordinator.java:279)
-	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.coordinateDelete(AbstractDeleteCoordinator.java:87)
-	at org.hibernate.persister.entity.AbstractEntityPersister.delete(AbstractEntityPersister.java:2969)
-	at org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:131)
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:632)
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:499)
-	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:363)
-	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
-	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
-	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407)
-	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:488)
-	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2329)
-	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1986)
-	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
-	at org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorImpl.beforeCompletion(JtaTransactionCoordinatorImpl.java:336)
-	at org.hibernate.resource.transaction.backend.jta.internal.synchronization.SynchronizationCallbackCoordinatorNonTrackingImpl.beforeCompletion(SynchronizationCallbackCoordinatorNonTrackingImpl.java:47)
-	at org.hibernate.resource.transaction.backend.jta.internal.synchronization.RegisteredSynchronization.beforeCompletion(RegisteredSynchronization.java:37)
-	at com.arjuna.ats.internal.jta.resources.arjunacore.SynchronizationImple.beforeCompletion(SynchronizationImple.java:52)
-	at com.arjuna.ats.arjuna.coordinator.TwoPhaseCoordinator.beforeCompletion(TwoPhaseCoordinator.java:348)
-	at com.arjuna.ats.arjuna.coordinator.TwoPhaseCoordinator.end(TwoPhaseCoordinator.java:66)
-	at com.arjuna.ats.arjuna.AtomicAction.commit(AtomicAction.java:135)
-	at com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple.commitAndDisassociate(TransactionImple.java:1271)
-	at com.arjuna.ats.internal.jta.transaction.arjunacore.BaseTransaction.commit(BaseTransaction.java:104)
-	at io.quarkus.narayana.jta.runtime.NotifyingTransactionManager.commit(NotifyingTransactionManager.java:70)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.endTransaction(TransactionalInterceptorBase.java:406)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:171)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
-	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
-	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
-	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
-	at tz.go.psssf.risk.compliance.service.ComplianceDocumentService_Subclass.update(Unknown Source)
-	at tz.go.psssf.risk.compliance.service.ComplianceDocumentService_ClientProxy.update(Unknown Source)
-	at tz.go.psssf.risk.compliance.resource.ComplianceDocumentResource.update(ComplianceDocumentResource.java:65)
-	at tz.go.psssf.risk.compliance.resource.ComplianceDocumentResource_Subclass.update$$superforward(Unknown Source)
-	at tz.go.psssf.risk.compliance.resource.ComplianceDocumentResource_Subclass$$function$$2.apply(Unknown Source)
-	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
-	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
-	at io.quarkus.hibernate.validator.runtime.interceptor.AbstractMethodValidationInterceptor.validateMethodInvocation(AbstractMethodValidationInterceptor.java:71)
-	at io.quarkus.hibernate.validator.runtime.jaxrs.ResteasyReactiveEndPointValidationInterceptor.validateMethodInvocation(ResteasyReactiveEndPointValidationInterceptor.java:21)
-	at io.quarkus.hibernate.validator.runtime.jaxrs.ResteasyReactiveEndPointValidationInterceptor_Bean.intercept(Unknown Source)
-	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
-	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
-	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
-	at tz.go.psssf.risk.compliance.resource.ComplianceDocumentResource_Subclass.update(Unknown Source)
-	at tz.go.psssf.risk.compliance.resource.ComplianceDocumentResource$quarkusrestinvoker$update_94c2c0dcb44aac5304a5a0169e62bd990e08e082.invoke(Unknown Source)
-	at org.jboss.resteasy.reactive.server.handlers.InvocationHandler.handle(InvocationHandler.java:29)
-	at io.quarkus.resteasy.reactive.server.runtime.QuarkusResteasyReactiveRequestContext.invokeHandler(QuarkusResteasyReactiveRequestContext.java:141)
-	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
-	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:599)
-	at org.jboss.threads.EnhancedQueueExecutor$Task.doRunWith(EnhancedQueueExecutor.java:2516)
-	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2495)
-	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1521)
-	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:11)
-	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:11)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: org.postgresql.util.PSQLException: ERROR: update or delete on table "regulatory_compliance_matrix" violates foreign key constraint "fk1lkds2dnujuifh77yy063blhk" on table "regulatory_compliance_matrix_section"
-  Detail: Key (id)=(f56b0988-e98e-4f99-9c2f-d83e9bf1759c) is still referenced from table "regulatory_compliance_matrix_section".
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
-	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
-	... 63 more
-
-2024-12-31 06:07:47,009 nurdin-mbp risk-management-system-dev.jar[56164] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (executor-thread-1) SQL Error: 0, SQLState: 23503
-2024-12-31 06:07:47,010 nurdin-mbp risk-management-system-dev.jar[56164] ERROR [org.hib.eng.jdb.spi.SqlExceptionHelper] (executor-thread-1) ERROR: update or delete on table "regulatory_compliance_matrix" violates foreign key constraint "fk1lkds2dnujuifh77yy063blhk" on table "regulatory_compliance_matrix_section"
-  Detail: Key (id)=(f56b0988-e98e-4f99-9c2f-d83e9bf1759c) is still referenced from table "regulatory_compliance_matrix_section".
-2024-12-31 06:07:47,011 nurdin-mbp risk-management-system-dev.jar[56164] WARN  [com.arj.ats.arjuna] (executor-thread-1) ARJUNA012125: TwoPhaseCoordinator.beforeCompletion - failed for SynchronizationImple< 0:ffffc0a801a5:f164:67735efe:e, org.hibernate.resource.transaction.backend.jta.internal.synchronization.RegisteredSynchronization@6e6dfd2b >: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: update or delete on table "regulatory_compliance_matrix" violates foreign key constraint "fk1lkds2dnujuifh77yy063blhk" on table "regulatory_compliance_matrix_section"
-  Detail: Key (id)=(f56b0988-e98e-4f99-9c2f-d83e9bf1759c) is still referenced from table "regulatory_compliance_matrix_section".] [delete from regulatory_compliance_matrix where id=?]
-	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:97)
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
-	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:108)
-	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:40)
-	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:52)
-	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.doStaticDelete(AbstractDeleteCoordinator.java:279)
-	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.coordinateDelete(AbstractDeleteCoordinator.java:87)
-	at org.hibernate.persister.entity.AbstractEntityPersister.delete(AbstractEntityPersister.java:2969)
-	at org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:131)
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:632)
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:499)
-	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:363)
-	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
-	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
-	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407)
-	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:488)
-	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2329)
-	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1986)
-	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
-	at org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorImpl.beforeCompletion(JtaTransactionCoordinatorImpl.java:336)
-	at org.hibernate.resource.transaction.backend.jta.internal.synchronization.SynchronizationCallbackCoordinatorNonTrackingImpl.beforeCompletion(SynchronizationCallbackCoordinatorNonTrackingImpl.java:47)
-	at org.hibernate.resource.transaction.backend.jta.internal.synchronization.RegisteredSynchronization.beforeCompletion(RegisteredSynchronization.java:37)
-	at com.arjuna.ats.internal.jta.resources.arjunacore.SynchronizationImple.beforeCompletion(SynchronizationImple.java:52)
-	at com.arjuna.ats.arjuna.coordinator.TwoPhaseCoordinator.beforeCompletion(TwoPhaseCoordinator.java:348)
-	at com.arjuna.ats.arjuna.coordinator.TwoPhaseCoordinator.end(TwoPhaseCoordinator.java:66)
-	at com.arjuna.ats.arjuna.AtomicAction.commit(AtomicAction.java:135)
-	at com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple.commitAndDisassociate(TransactionImple.java:1271)
-	at com.arjuna.ats.internal.jta.transaction.arjunacore.BaseTransaction.commit(BaseTransaction.java:104)
-	at io.quarkus.narayana.jta.runtime.NotifyingTransactionManager.commit(NotifyingTransactionManager.java:70)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.endTransaction(TransactionalInterceptorBase.java:406)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:171)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
-	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
-	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
-	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
-	at tz.go.psssf.risk.compliance.service.ComplianceDocumentService_Subclass.update(Unknown Source)
-	at tz.go.psssf.risk.compliance.service.ComplianceDocumentService_ClientProxy.update(Unknown Source)
-	at tz.go.psssf.risk.compliance.resource.ComplianceDocumentResource.update(ComplianceDocumentResource.java:65)
-	at tz.go.psssf.risk.compliance.resource.ComplianceDocumentResource_Subclass.update$$superforward(Unknown Source)
-	at tz.go.psssf.risk.compliance.resource.ComplianceDocumentResource_Subclass$$function$$2.apply(Unknown Source)
-	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
-	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
-	at io.quarkus.hibernate.validator.runtime.interceptor.AbstractMethodValidationInterceptor.validateMethodInvocation(AbstractMethodValidationInterceptor.java:71)
-	at io.quarkus.hibernate.validator.runtime.jaxrs.ResteasyReactiveEndPointValidationInterceptor.validateMethodInvocation(ResteasyReactiveEndPointValidationInterceptor.java:21)
-	at io.quarkus.hibernate.validator.runtime.jaxrs.ResteasyReactiveEndPointValidationInterceptor_Bean.intercept(Unknown Source)
-	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
-	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
-	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
-	at tz.go.psssf.risk.compliance.resource.ComplianceDocumentResource_Subclass.update(Unknown Source)
-	at tz.go.psssf.risk.compliance.resource.ComplianceDocumentResource$quarkusrestinvoker$update_94c2c0dcb44aac5304a5a0169e62bd990e08e082.invoke(Unknown Source)
-	at org.jboss.resteasy.reactive.server.handlers.InvocationHandler.handle(InvocationHandler.java:29)
-	at io.quarkus.resteasy.reactive.server.runtime.QuarkusResteasyReactiveRequestContext.invokeHandler(QuarkusResteasyReactiveRequestContext.java:141)
-	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
-	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:599)
-	at org.jboss.threads.EnhancedQueueExecutor$Task.doRunWith(EnhancedQueueExecutor.java:2516)
-	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2495)
-	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1521)
-	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:11)
-	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:11)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: org.postgresql.util.PSQLException: ERROR: update or delete on table "regulatory_compliance_matrix" violates foreign key constraint "fk1lkds2dnujuifh77yy063blhk" on table "regulatory_compliance_matrix_section"
-  Detail: Key (id)=(f56b0988-e98e-4f99-9c2f-d83e9bf1759c) is still referenced from table "regulatory_compliance_matrix_section".
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
-	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
-	... 63 more
-
-2024-12-31 06:11:44,342 nurdin-mbp risk-management-system-dev.jar[56164] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (executor-thread-6) SQL Error: 0, SQLState: 23503
-2024-12-31 06:11:44,343 nurdin-mbp risk-management-system-dev.jar[56164] ERROR [org.hib.eng.jdb.spi.SqlExceptionHelper] (executor-thread-6) ERROR: update or delete on table "regulatory_compliance_matrix" violates foreign key constraint "fk1lkds2dnujuifh77yy063blhk" on table "regulatory_compliance_matrix_section"
-  Detail: Key (id)=(ec699f20-ac2b-4b6c-95e5-c1cd55364ba4) is still referenced from table "regulatory_compliance_matrix_section".
-2024-12-31 06:11:44,343 nurdin-mbp risk-management-system-dev.jar[56164] WARN  [com.arj.ats.arjuna] (executor-thread-6) ARJUNA012125: TwoPhaseCoordinator.beforeCompletion - failed for SynchronizationImple< 0:ffffc0a801a5:f164:67735efe:20, org.hibernate.resource.transaction.backend.jta.internal.synchronization.RegisteredSynchronization@6badc188 >: org.hibernate.exception.ConstraintViolationException: could not execute statement [ERROR: update or delete on table "regulatory_compliance_matrix" violates foreign key constraint "fk1lkds2dnujuifh77yy063blhk" on table "regulatory_compliance_matrix_section"
-  Detail: Key (id)=(ec699f20-ac2b-4b6c-95e5-c1cd55364ba4) is still referenced from table "regulatory_compliance_matrix_section".] [delete from regulatory_compliance_matrix where id=?]
-	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:97)
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
-	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:108)
-	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:40)
-	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:52)
-	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.doStaticDelete(AbstractDeleteCoordinator.java:279)
-	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.coordinateDelete(AbstractDeleteCoordinator.java:87)
-	at org.hibernate.persister.entity.AbstractEntityPersister.delete(AbstractEntityPersister.java:2969)
-	at org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:131)
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:632)
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:499)
-	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:363)
-	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
-	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
-	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407)
-	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:488)
-	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2329)
-	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1986)
-	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
-	at org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorImpl.beforeCompletion(JtaTransactionCoordinatorImpl.java:336)
-	at org.hibernate.resource.transaction.backend.jta.internal.synchronization.SynchronizationCallbackCoordinatorNonTrackingImpl.beforeCompletion(SynchronizationCallbackCoordinatorNonTrackingImpl.java:47)
-	at org.hibernate.resource.transaction.backend.jta.internal.synchronization.RegisteredSynchronization.beforeCompletion(RegisteredSynchronization.java:37)
-	at com.arjuna.ats.internal.jta.resources.arjunacore.SynchronizationImple.beforeCompletion(SynchronizationImple.java:52)
-	at com.arjuna.ats.arjuna.coordinator.TwoPhaseCoordinator.beforeCompletion(TwoPhaseCoordinator.java:348)
-	at com.arjuna.ats.arjuna.coordinator.TwoPhaseCoordinator.end(TwoPhaseCoordinator.java:66)
-	at com.arjuna.ats.arjuna.AtomicAction.commit(AtomicAction.java:135)
-	at com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionImple.commitAndDisassociate(TransactionImple.java:1271)
-	at com.arjuna.ats.internal.jta.transaction.arjunacore.BaseTransaction.commit(BaseTransaction.java:104)
-	at io.quarkus.narayana.jta.runtime.NotifyingTransactionManager.commit(NotifyingTransactionManager.java:70)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.endTransaction(TransactionalInterceptorBase.java:406)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:171)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
-	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
-	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
-	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
-	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
-	at tz.go.psssf.risk.compliance.service.ComplianceDocumentService_Subclass.update(Unknown Source)
-	at tz.go.psssf.risk.compliance.service.ComplianceDocumentService_ClientProxy.update(Unknown Source)
-	at tz.go.psssf.risk.compliance.resource.ComplianceDocumentResource.update(ComplianceDocumentResource.java:65)
-	at tz.go.psssf.risk.compliance.resource.ComplianceDocumentResource_Subclass.update$$superforward(Unknown Source)
-	at tz.go.psssf.risk.compliance.resource.ComplianceDocumentResource_Subclass$$function$$2.apply(Unknown Source)
-	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
-	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
-	at io.quarkus.hibernate.validator.runtime.interceptor.AbstractMethodValidationInterceptor.validateMethodInvocation(AbstractMethodValidationInterceptor.java:71)
-	at io.quarkus.hibernate.validator.runtime.jaxrs.ResteasyReactiveEndPointValidationInterceptor.validateMethodInvocation(ResteasyReactiveEndPointValidationInterceptor.java:21)
-	at io.quarkus.hibernate.validator.runtime.jaxrs.ResteasyReactiveEndPointValidationInterceptor_Bean.intercept(Unknown Source)
-	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
-	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
-	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
-	at tz.go.psssf.risk.compliance.resource.ComplianceDocumentResource_Subclass.update(Unknown Source)
-	at tz.go.psssf.risk.compliance.resource.ComplianceDocumentResource$quarkusrestinvoker$update_94c2c0dcb44aac5304a5a0169e62bd990e08e082.invoke(Unknown Source)
-	at org.jboss.resteasy.reactive.server.handlers.InvocationHandler.handle(InvocationHandler.java:29)
-	at io.quarkus.resteasy.reactive.server.runtime.QuarkusResteasyReactiveRequestContext.invokeHandler(QuarkusResteasyReactiveRequestContext.java:141)
-	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
-	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:599)
-	at org.jboss.threads.EnhancedQueueExecutor$Task.doRunWith(EnhancedQueueExecutor.java:2516)
-	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2495)
-	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1521)
-	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:11)
-	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:11)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: org.postgresql.util.PSQLException: ERROR: update or delete on table "regulatory_compliance_matrix" violates foreign key constraint "fk1lkds2dnujuifh77yy063blhk" on table "regulatory_compliance_matrix_section"
-  Detail: Key (id)=(ec699f20-ac2b-4b6c-95e5-c1cd55364ba4) is still referenced from table "regulatory_compliance_matrix_section".
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
-	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
-	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
-	... 63 more
-
-2024-12-31 06:15:25,809 nurdin-mbp risk-management-system-dev.jar[56164] INFO  [io.quarkus] (Quarkus Main Thread) risk-management-system stopped in 0.022s
+2025-05-17 14:47:44,402 mdsoln risk-management-system-dev.jar[34420] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.log.category."org.hibernate.type.descriptor.sql.BasicBinder"" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-05-17 14:47:44,402 mdsoln risk-management-system-dev.jar[34420] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.log.category."io.quarkus.security"" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-05-17 14:47:44,402 mdsoln risk-management-system-dev.jar[34420] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.log.category."org.hibernate.SQL"" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-05-17 14:47:44,402 mdsoln risk-management-system-dev.jar[34420] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.log.category."io.smallrye.jwt.auth.principal"" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-05-17 14:47:44,403 mdsoln risk-management-system-dev.jar[34420] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.log.category."io.smallrye.jwt"" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-05-17 14:47:44,403 mdsoln risk-management-system-dev.jar[34420] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.swagger-ui.auth-url" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-05-17 14:47:44,403 mdsoln risk-management-system-dev.jar[34420] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.smallrye-json.date-format" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-05-17 14:47:44,403 mdsoln risk-management-system-dev.jar[34420] WARN  [io.qua.config] (Quarkus Main Thread) Unrecognized configuration key "quarkus.swagger-ui.bearer-token-enabled" was provided; it will be ignored; verify that the dependency extension for this configuration is set or that you did not make a typo
+2025-05-17 14:47:45,974 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.workflow.entity.WorkflowLevel
+2025-05-17 14:47:45,975 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.ResidualRisk
+2025-05-17 14:47:45,975 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskAssessmentHistory
+2025-05-17 14:47:45,975 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.compliance.entity.ComplianceDocumentCategory
+2025-05-17 14:47:45,976 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskRegistry
+2025-05-17 14:47:45,976 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.workflow.entity.EntityType
+2025-05-17 14:47:45,976 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskIndicatorThreshold
+2025-05-17 14:47:45,977 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.BusinessProcess
+2025-05-17 14:47:45,977 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.compliance.entity.ComplianceStatus
+2025-05-17 14:47:45,977 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Permission
+2025-05-17 14:47:45,977 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskActionPlanMonitoring
+2025-05-17 14:47:45,977 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskAssessmentFlow
+2025-05-17 14:47:45,977 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Likelihood
+2025-05-17 14:47:45,978 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.SubCategory
+2025-05-17 14:47:45,978 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskOpportunity
+2025-05-17 14:47:45,978 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.ComparisonOperator
+2025-05-17 14:47:45,978 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.ThresholdCategory
+2025-05-17 14:47:45,978 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskIndicatorComparisonCondition
+2025-05-17 14:47:45,978 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Department
+2025-05-17 14:47:45,978 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskActionPlan
+2025-05-17 14:47:45,978 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.MonitoringFrequency
+2025-05-17 14:47:45,978 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.compliance.entity.RegulatoryComplianceMatrixSection
+2025-05-17 14:47:45,979 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskStatus
+2025-05-17 14:47:45,979 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.compliance.entity.ComplianceEntityCategory
+2025-05-17 14:47:45,979 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.workflow.entity.WorkflowStatusType
+2025-05-17 14:47:45,979 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Directorate
+2025-05-17 14:47:45,979 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.workflow.entity.Workflow
+2025-05-17 14:47:45,979 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.compliance.entity.ComplianceEntity
+2025-05-17 14:47:45,979 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskAssessmentLevel
+2025-05-17 14:47:45,979 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Impact
+2025-05-17 14:47:45,979 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.ControlIndicator
+2025-05-17 14:47:45,980 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.User
+2025-05-17 14:47:45,980 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.ControlIndicatorThreshold
+2025-05-17 14:47:45,980 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Risk
+2025-05-17 14:47:45,980 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.workflow.entity.WorkflowLog
+2025-05-17 14:47:45,980 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskAssessmentStatus
+2025-05-17 14:47:45,980 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskArea
+2025-05-17 14:47:45,980 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.workflow.entity.WorkflowStatus
+2025-05-17 14:47:45,980 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.workflow.entity.WorkflowEntity
+2025-05-17 14:47:45,980 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskChampion
+2025-05-17 14:47:45,980 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskCause
+2025-05-17 14:47:45,981 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskAreaCategory
+2025-05-17 14:47:45,981 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskIndicator
+2025-05-17 14:47:45,981 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.compliance.entity.RegulatoryComplianceMatrix
+2025-05-17 14:47:45,981 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Category
+2025-05-17 14:47:45,981 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Measurement
+2025-05-17 14:47:45,981 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.InherentRisk
+2025-05-17 14:47:45,981 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskIndicatorActionPlan
+2025-05-17 14:47:45,981 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskOwner
+2025-05-17 14:47:45,981 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.ControlIndicatorComparisonCondition
+2025-05-17 14:47:45,981 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskIndicatorActionPlanMonitoring
+2025-05-17 14:47:45,982 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.FundObjective
+2025-05-17 14:47:45,982 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.Role
+2025-05-17 14:47:45,982 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.StatusType
+2025-05-17 14:47:45,982 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.UserType
+2025-05-17 14:47:45,982 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.compliance.entity.ComplianceDocument
+2025-05-17 14:47:45,982 mdsoln risk-management-system-dev.jar[34420] INFO  [org.hib.env.con.int.met.AuditMetadataGenerator] (Quarkus Main Thread) Adding properties for entity: tz.go.psssf.risk.entity.RiskControl
+2025-05-17 14:47:50,451 mdsoln risk-management-system-dev.jar[34420] ERROR [org.hib.met.int.MetadataContext] (JPA Startup Thread) HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2025-05-17 14:47:52,072 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,074 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_ehf2f9w9aiibafspdeovpe5aj" of relation "comparison_operator" does not exist, skipping
+2025-05-17 14:47:52,084 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,086 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_lldm8ff96jxit2wgbfm9y1nn7" of relation "comparison_operator" does not exist, skipping
+2025-05-17 14:47:52,096 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,097 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk2yigtlqx8h0ato7ehcjuw984t" of relation "compliance_document_category" does not exist, skipping
+2025-05-17 14:47:52,105 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,107 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "ukm28duwx21yoqe7b3tf6xskcfv" of relation "compliance_entity_category" does not exist, skipping
+2025-05-17 14:47:52,113 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,114 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_qn4lqvta0qn7ohdwda0xp8rg7" of relation "compliance_status" does not exist, skipping
+2025-05-17 14:47:52,119 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,120 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_q8ymhgj6pt1msox0o3bg51uvo" of relation "department" does not exist, skipping
+2025-05-17 14:47:52,128 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,129 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_dwkg1tjf0imsg1dg75rdul0mj" of relation "department" does not exist, skipping
+2025-05-17 14:47:52,134 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,135 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_abjry49adef2vus3ml12avlwp" of relation "directorate" does not exist, skipping
+2025-05-17 14:47:52,140 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,141 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_ophfodn4lkiaugvnkaqfq9100" of relation "directorate" does not exist, skipping
+2025-05-17 14:47:52,146 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,148 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_8ykg7p8p3n0hjnpwl9gft36g3" of relation "entity_type" does not exist, skipping
+2025-05-17 14:47:52,155 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,156 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_8k4kmlf0vl2m8hcmdpa0qowfu" of relation "impact" does not exist, skipping
+2025-05-17 14:47:52,161 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,161 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_chrgnclsqd3g3cg4g5imsixns" of relation "likelihood" does not exist, skipping
+2025-05-17 14:47:52,167 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,168 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_3rha18iq3toe18rubf767iski" of relation "measurement" does not exist, skipping
+2025-05-17 14:47:52,175 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,176 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_ofv19y7thfwjc2lmpc7736rdu" of relation "monitoring_frequency" does not exist, skipping
+2025-05-17 14:47:52,181 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,182 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_7lcb6glmvwlro3p2w2cewxtvd" of relation "permissions" does not exist, skipping
+2025-05-17 14:47:52,187 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,187 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_9pv6ep7odkx6xpg36hvo93vjr" of relation "report_dashboard" does not exist, skipping
+2025-05-17 14:47:52,192 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,193 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_elssbvjls171qsdmny60adbqg" of relation "risk_area" does not exist, skipping
+2025-05-17 14:47:52,200 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,201 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_kqdiglqc56r4tigdp1g5sjnw9" of relation "risk_area_category" does not exist, skipping
+2025-05-17 14:47:52,206 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,207 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_ctac8occbasq3t1t01gx5nnti" of relation "risk_assessment_status" does not exist, skipping
+2025-05-17 14:47:52,213 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,214 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_lixp4xtc11vbenn52sa9g99pq" of relation "risk_registry" does not exist, skipping
+2025-05-17 14:47:52,218 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,219 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_52t6vi7sivcr8xijw9gtp6dys" of relation "risk_status" does not exist, skipping
+2025-05-17 14:47:52,225 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,226 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_ch1113horj4qr56f91omojv8" of relation "roles" does not exist, skipping
+2025-05-17 14:47:52,233 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,235 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_4exq22t29nhqfyo1i59ywjjt6" of relation "status_type" does not exist, skipping
+2025-05-17 14:47:52,242 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,244 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_f23l540xcg2h8yw8kje4xrs1t" of relation "threshold_category" does not exist, skipping
+2025-05-17 14:47:52,252 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,253 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_h1cthdgbmec49l3eul4w20ols" of relation "user_type" does not exist, skipping
+2025-05-17 14:47:52,259 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,259 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_6dotkott2kjsp8vw4d0m25fb7" of relation "users" does not exist, skipping
+2025-05-17 14:47:52,265 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,265 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_63cf888pmqtt5tipcne79xsbm" of relation "users" does not exist, skipping
+2025-05-17 14:47:52,273 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,274 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_stnipyl68fbsk7ie3yvcmhk5u" of relation "users" does not exist, skipping
+2025-05-17 14:47:52,279 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,280 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_flkvltf07qb5k8m5rytrwwso0" of relation "workflow" does not exist, skipping
+2025-05-17 14:47:52,285 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Warning Code: 0, SQLState: 00000
+2025-05-17 14:47:52,286 mdsoln risk-management-system-dev.jar[34420] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) constraint "uk_ry800u0q17mb1sae9u2ttsorp" of relation "workflow_status_type" does not exist, skipping
+2025-05-17 14:47:52,597 mdsoln risk-management-system-dev.jar[34420] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
+2025-05-17 14:47:52,598 mdsoln risk-management-system-dev.jar[34420] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
+2025-05-17 14:47:52,599 mdsoln risk-management-system-dev.jar[34420] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
+2025-05-17 14:47:52,599 mdsoln risk-management-system-dev.jar[34420] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
+2025-05-17 14:47:52,600 mdsoln risk-management-system-dev.jar[34420] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################  START SEED ################################
+2025-05-17 14:47:52,600 mdsoln risk-management-system-dev.jar[34420] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
+2025-05-17 14:47:52,601 mdsoln risk-management-system-dev.jar[34420] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
+2025-05-17 14:47:52,601 mdsoln risk-management-system-dev.jar[34420] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
+2025-05-17 14:47:52,602 mdsoln risk-management-system-dev.jar[34420] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
+2025-05-17 14:47:52,602 mdsoln risk-management-system-dev.jar[34420] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
+2025-05-17 14:47:52,603 mdsoln risk-management-system-dev.jar[34420] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
+2025-05-17 14:47:52,603 mdsoln risk-management-system-dev.jar[34420] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
+2025-05-17 14:47:52,603 mdsoln risk-management-system-dev.jar[34420] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################  END SEED ################################
+2025-05-17 14:47:52,604 mdsoln risk-management-system-dev.jar[34420] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
+2025-05-17 14:47:52,605 mdsoln risk-management-system-dev.jar[34420] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
+2025-05-17 14:47:52,605 mdsoln risk-management-system-dev.jar[34420] INFO  [tz.go.pss.ris.see.DataSeeder] (Quarkus Main Thread) ########################################################
+2025-05-17 14:47:52,702 mdsoln risk-management-system-dev.jar[34420] INFO  [io.quarkus] (Quarkus Main Thread) risk-management-system 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.10.2) started in 12.813s. Listening on: http://localhost:8080
+2025-05-17 14:47:52,703 mdsoln risk-management-system-dev.jar[34420] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2025-05-17 14:47:52,703 mdsoln risk-management-system-dev.jar[34420] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, config-yaml, hibernate-envers, hibernate-orm, hibernate-orm-panache, hibernate-orm-rest-data-panache, hibernate-validator, jdbc-postgresql, narayana-jta, rest, rest-jackson, rest-links, security, security-jpa, smallrye-context-propagation, smallrye-jwt, smallrye-openapi, swagger-ui, vertx]

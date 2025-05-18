@@ -5,28 +5,30 @@ services:
     image: postgres:latest
     container_name: postgres
     environment:
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: mydatabase
+      POSTGRES_USER: ${DB_USER:-myuser}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-mypassword}
+      POSTGRES_DB: ${DB_NAME:-mydatabase}
     volumes:
-      - ./postgres-data:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     networks:
       - risknetwork
+    restart: always
 
   pgadmin:
     image: dpage/pgadmin4:latest
     container_name: pgadmin
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@example.com
-      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL:-admin@example.com}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD:-admin}
     volumes:
       - pgadmin-data:/var/lib/pgadmin
     ports:
       - "8088:80"
     networks:
       - risknetwork
+    restart: always
 
   backend:
     build:
@@ -35,13 +37,14 @@ services:
     ports:
       - "8080:8080"
     environment:
-      QUARKUS_DATASOURCE_USERNAME: myuser
-      QUARKUS_DATASOURCE_PASSWORD: mypassword
-      QUARKUS_DATASOURCE_JDBC_URL: jdbc:postgresql://postgres:5432/mydatabase
+      QUARKUS_DATASOURCE_USERNAME: ${DB_USER:-myuser}
+      QUARKUS_DATASOURCE_PASSWORD: ${DB_PASSWORD:-mypassword}
+      QUARKUS_DATASOURCE_JDBC_URL: jdbc:postgresql://postgres:5432/${DB_NAME:-mydatabase}
     depends_on:
       - postgres
     networks:
       - risknetwork
+    restart: always
 
   frontend:
     build:
@@ -49,20 +52,25 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
+    environment:
+      BACKEND_URL: ${BACKEND_URL:-http://localhost:8080/api}
     networks:
       - risknetwork
-    command: npm run dev
+    restart: always
+    depends_on:
+      - backend
 
   backup:
     image: postgres:latest
     container_name: postgres-backup
     volumes:
       - ./postgres-backup:/backup
-      - ./postgres-data:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
       - ./backup/backup.sh:/backup.sh
     entrypoint: [ "sh", "/backup.sh" ]
     networks:
       - risknetwork
+    restart: always
 
 networks:
   risknetwork:
@@ -70,4 +78,6 @@ networks:
 
 volumes:
   pgadmin-data:
+    driver: local
+  postgres-data:
     driver: local
