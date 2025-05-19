@@ -124,7 +124,7 @@ const SideNav: React.FC = () => {
         const { selectedKeys, openKeys } = getDefaultSelectedKeysAndOpenKeys(window.location.pathname);
         dispatch(setSelectedKeys(selectedKeys));
         dispatch(setOpenKeys(openKeys));
-    }, [dispatch, menuItems]);
+    }, [dispatch, menuItems, getDefaultSelectedKeysAndOpenKeys]);
 
     return (
         <>

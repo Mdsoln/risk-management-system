@@ -24,7 +24,7 @@ const BcmDependencyTable: React.FC = () => {
     // Fetch data on component mount or when pagination/search changes
     useEffect(() => {
         fetchData(pagination.current, pagination.pageSize, searchKeyword);
-    }, [pagination.current, pagination.pageSize, searchKeyword]);
+    }, [pagination, searchKeyword]);
 
     const fetchData = async (page: number, pageSize: number, keyword: string) => {
         setLoading(true);

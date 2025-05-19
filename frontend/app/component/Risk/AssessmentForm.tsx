@@ -40,7 +40,7 @@ const AssessmentForm: React.ForwardRefRenderFunction<any, AssessmentFormProps> =
             form.resetFields();
             setErrorState(null); // Reset the error state when the form is reopened
         }
-    }, [visible]);
+    }, [visible, form]);
 
     const handleFinish = async (values: RiskAssessmentHistoryDto) => {
         setErrorState(null);

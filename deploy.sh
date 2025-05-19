@@ -29,9 +29,14 @@ if ! command -v sshpass &> /dev/null; then
   sudo apt-get update && sudo apt-get install -y sshpass
 fi
 
-# Copy project files to the server
+# Ensure remote directory exists
+echo "📁 Creating remote directory..."
+sshpass -p "$SERVER_PASSWORD" ssh -o StrictHostKeyChecking=no "$SERVER_USER@$SERVER_IP" "mkdir -p $REMOTE_DIR"
+
+# Copy everything except .git and node_modules or target folders (optional)
 echo "📤 Copying project files to $SERVER_IP..."
-sshpass -p "$SERVER_PASSWORD" scp -o StrictHostKeyChecking=no -r . "$SERVER_USER@$SERVER_IP:$REMOTE_DIR"
+sshpass -p "$SERVER_PASSWORD" scp -o StrictHostKeyChecking=no -r $(ls -A | grep -vE '(\.git|node_modules|target)') "$SERVER_USER@$SERVER_IP:$REMOTE_DIR"
+
 
 # Run remote Docker setup and deployment
 echo "🚀 Deploying on server..."

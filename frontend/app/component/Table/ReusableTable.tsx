@@ -55,7 +55,7 @@ const ReusableTable = <T extends TableItem>({ columns, tableKey, fetchTableData,
             fetchData(pagination.current, pagination.pageSize);
             initialFetchRef.current = false;
         }
-    }, []);
+    }, [fetchData, pagination]);
 
     const handleTableChange = (pagination: TablePaginationConfig) => {
         fetchData(pagination.current!, pagination.pageSize!);

@@ -43,7 +43,7 @@ const AddEditRiskIndicatorActionPlanForm: React.ForwardRefRenderFunction<any, Ad
             form.resetFields();
             setDescription('');
         }
-    }, [initialValues, form]);
+    }, [initialValues, form, clearForm]);
 
     const fetchDepartments = async () => {
         try {

@@ -34,7 +34,7 @@ const RiskTable: React.FC = () => {
 
     useEffect(() => {
         fetchTableData(pagination.current, pagination.pageSize, debouncedSearchKeyword);
-    }, [pagination.current, pagination.pageSize, debouncedSearchKeyword]);
+    }, [pagination, debouncedSearchKeyword, fetchTableData]);
 
     const fetchTableData = async (page: number, pageSize: number, keyword: string) => {
         setLoading(true);

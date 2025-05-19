@@ -35,7 +35,7 @@ const BcmPhoneListTable: React.FC = () => {
     // Fetch data
     useEffect(() => {
         fetchData(pagination.current, pagination.pageSize, searchKeyword);
-    }, [pagination.current, pagination.pageSize, searchKeyword]);
+    }, [pagination, searchKeyword]);
 
     const fetchData = async (page: number, pageSize: number, keyword: string) => {
         setLoading(true);

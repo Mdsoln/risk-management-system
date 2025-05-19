@@ -35,7 +35,7 @@ const BcmDamageAssessmentTable: React.FC = () => {
     // Fetch data when dependencies change
     useEffect(() => {
         fetchData(pagination.current, pagination.pageSize, searchKeyword);
-    }, [pagination.current, pagination.pageSize, searchKeyword]);
+    }, [pagination, searchKeyword]);
 
     // Fetch BCM damage assessments
     const fetchData = async (page: number, pageSize: number, keyword: string) => {

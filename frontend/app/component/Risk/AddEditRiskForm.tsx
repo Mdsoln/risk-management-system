@@ -171,7 +171,7 @@ const AddEditRiskForm: React.ForwardRefRenderFunction<any, AddEditRiskFormProps>
             form.resetFields(); // Clear the form fields when there are no initial values
             setDescription(''); // Clear the description field
         }
-    }, [initialValues, form]);
+    }, [initialValues, form, clearForm]);
 
 
     useEffect(() => {

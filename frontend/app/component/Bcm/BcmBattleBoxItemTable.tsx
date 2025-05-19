@@ -38,7 +38,7 @@ const BcmBattleBoxItemTable: React.FC = () => {
     // Fetch data on component mount or dependency change
     useEffect(() => {
         fetchData(pagination.current, pagination.pageSize, searchKeyword);
-    }, [pagination.current, pagination.pageSize, searchKeyword]);
+    }, [pagination, searchKeyword]);
 
     // Fetch data
     const fetchData = async (page: number, pageSize: number, keyword: string) => {

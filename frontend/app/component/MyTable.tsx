@@ -438,7 +438,7 @@ const RiskRegister: React.FC = () => {
 
     useEffect(() => {
         fetchData(0); // Fetch first page by default
-    }, []);
+    }, [fetchData]);
 
     const fetchData = async (page: number) => {
         setLoading(true);
