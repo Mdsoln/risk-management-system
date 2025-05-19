@@ -136,9 +136,9 @@ export const addFundObjective = async (dto: FundObjectiveDTO): Promise<FundObjec
 /**
  * Update an existing Fund Objective by ID.
  */
-export const updateFundObjective = async (id: string, dto: FundObjectiveDTO): Promise<FundObjectivePojo> => {
+export const updateFundObjective = async (id: string, dto: FundObjectiveDTO): Promise<import("@/app/types/api").ApiResponse<FundObjective>> => {
     const response = await axios.put(`${BASE_URL}/${id}`, dto);
-    return response.data.data; // Assuming the data is inside the `data` field
+    return response.data; // Return the entire response data
 };
 
 /**
