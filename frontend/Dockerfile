@@ -1,20 +1,28 @@
-# Use an official Node.js image
+# Use official Node.js image
+FROM node:18-alpine AS builder
+
+# Set working directory
+WORKDIR /app
+
+# Install dependencies
+COPY package*.json ./
+RUN npm install
+
+# Copy app source and build it
+COPY . .
+RUN npm run build
+
+# --------- Use a minimal image for production ---------
 FROM node:18-alpine
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# Copy built files from builder stage
+COPY --from=builder /app ./
 
-# Install dependencies
-RUN npm install
-
-# Copy the rest of the application code
-COPY . .
-
-# Expose the application on port 3000
+# Expose port 3000
 EXPOSE 3000
 
-# Start the application in development mode
-CMD ["npm", "run", "dev"]
+# Start Next.js in production mode and bind to 0.0.0.0 for Docker
+CMD ["npx", "next", "start", "-p", "3000", "-H", "0.0.0.0"]
