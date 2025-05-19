@@ -418,7 +418,7 @@
 import React, { useEffect, useState } from 'react';
 import { PaginationResult } from '../types/api/PaginationData';
 import { RiskRegistry } from '../types/api/RiskRegistry';
-import { getRiskRegistries } from '../services/api/riskRegistryApi';
+import { getRiskRegistryList } from '../services/api/riskRegistryApi';
 import { Card, Modal, Table } from 'antd';
 // import 'antd/dist/antd.css';
 
@@ -443,7 +443,7 @@ const RiskRegister: React.FC = () => {
     const fetchData = async (page: number) => {
         setLoading(true);
         try {
-            const data = await getRiskRegistries(page, riskRegistries.pageSize);
+            const data = await getRiskRegistryList(page, riskRegistries.pageSize);
             setRiskRegistries(data);
         } catch (error) {
             console.error('Error fetching data:', error);

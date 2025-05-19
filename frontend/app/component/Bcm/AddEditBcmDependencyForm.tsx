@@ -126,4 +126,6 @@ const AddEditBcmDependencyForm = forwardRef<any, AddEditBcmDependencyFormProps>(
     }
 );
 
+AddEditBcmDependencyForm.displayName = 'AddEditBcmDependencyForm';
+
 export default AddEditBcmDependencyForm;

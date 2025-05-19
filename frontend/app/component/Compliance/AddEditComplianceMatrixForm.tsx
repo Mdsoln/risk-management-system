@@ -194,4 +194,6 @@ const AddEditComplianceMatrixForm = forwardRef<any, AddEditComplianceMatrixFormP
     }
 );
 
+AddEditComplianceMatrixForm.displayName = 'AddEditComplianceMatrixForm';
+
 export default AddEditComplianceMatrixForm;
