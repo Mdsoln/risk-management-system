@@ -531,7 +531,7 @@ export interface ResidualRisk {
 // RESPONSE
 
 export interface ApiResponse<T> {
-    code: string;
+    code: string | number;
     message: string;
     data: T | T[] | null;
     errors: any;

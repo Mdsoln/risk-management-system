@@ -53,13 +53,13 @@
 //             throw error;
 //         }
 //     }
-// };
+//  };
 
 // export const deleteFundObjective = async (id: string): Promise<void> => {
 //     await axios.delete(`${API_V1}/fund-objective/${id}`);
 // };
 import axios from 'axios';
-import { FundObjectivePojo, FundObjectiveDTO, PaginationResult, FundObjective } from '@/app/types/api';
+import { FundObjectivePojo, FundObjectiveDTO, PaginationResult, FundObjective, ApiResponse } from '@/app/types/api';
 import { API_V1 } from '@/app/constants/api';
 
 // Base API endpoint
@@ -136,10 +136,33 @@ export const addFundObjective = async (dto: FundObjectiveDTO): Promise<FundObjec
 /**
  * Update an existing Fund Objective by ID.
  */
-export const updateFundObjective = async (id: string, dto: FundObjectiveDTO): Promise<FundObjectivePojo> => {
-    const response = await axios.put(`${BASE_URL}/${id}`, dto);
-    return response.data.data; // Assuming the data is inside the `data` field
-};
+export const updateFundObjective = async (id: string, data: FundObjective): Promise<ApiResponse<FundObjective>> => {
+    try {
+        const response = await fetch(`/api/fund-objective/${id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        });
+        const result = await response.json();
+        return {
+            code: response.status,
+            message: response.ok ? 'Success' : 'Failed to update',
+            data: result, // Assuming the API returns the updated FundObjective
+            errors: response.ok ? null : result.errors || [],
+            description: response.ok ? 'Fund objective updated successfully' : 'Failed to update fund objective',
+            refId: result.refId || null,
+        };
+    } catch (error) {
+        return {
+            code: 500,
+            message: 'Internal server error',
+            data: null,
+            errors:[error],
+            description: 'An error occurred while updating the fund objective',
+            refId: '',
+        };
+        };
+    }
 
 /**
  * Delete a Fund Objective by ID.
