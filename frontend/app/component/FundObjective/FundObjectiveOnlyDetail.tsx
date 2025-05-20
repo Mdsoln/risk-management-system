@@ -230,7 +230,29 @@ const FundObjectiveOnlyDetail: React.FC<FundObjectiveOnlyDetailProps> = ({ viewD
 };
 
 export default FundObjectiveOnlyDetail;
-function handleApiResponse(arg0: () => Promise<import("@/app/types/api").ApiResponse<FundObjective>>, setErrorState: React.Dispatch<React.SetStateAction<ErrorState>>, arg2: () => Promise<void>) {
-    throw new Error('Function not implemented.');
+async function handleApiResponse(
+    apiCall: () => Promise<import("@/app/types/api").ApiResponse<FundObjective>>,
+    setErrorState: React.Dispatch<React.SetStateAction<ErrorState>>,
+    onSuccess: () => Promise<void>
+) {
+    try {
+        const response = await apiCall();
+        if (response.code === '200' || response.code === '201') {
+            await onSuccess();
+        } else {
+            setErrorState({
+                message: response.message || 'An error occurred',
+                description: response.description || null,
+                errors: response.errors || null,
+                refId: response.refId || null
+            });
+        }
+    } catch (error: any) {
+        setErrorState({
+            message: error.message || 'An error occurred',
+            description: error.description || null,
+            errors: error.errors || null,
+            refId: error.refId || null
+        });
+    }
 }
-
