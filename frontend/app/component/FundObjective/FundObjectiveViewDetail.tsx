@@ -1,10 +1,29 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Table, Tooltip, message } from 'antd';
-import { FundObjective, ApiResponse, ErrorState } from '@/app/types/api';
+import { FundObjective, FundObjectivePojo, ApiResponse, ErrorState } from '@/app/types/api';
 import { BarsOutlined } from '@ant-design/icons';
 import DisplayTitle from '../Display/DisplayTitle';
 import FundObjectiveOnlyDetail from './FundObjectiveOnlyDetail'; // Import the new component
 import { getFundObjectiveById } from '@/app/services/api/fundObjectiveApi';
+
+// Conversion function to transform FundObjectivePojo to FundObjective
+const convertPojoToFundObjective = (pojo: FundObjectivePojo, currentData?: FundObjective | null): FundObjective => {
+    return {
+        id: pojo.id,
+        name: pojo.name,
+        description: pojo.description,
+        startDateTime: pojo.startDateTime,
+        endDateTime: pojo.endDateTime,
+        // Use businessProcesses from pojo, but rename to match FundObjective structure
+        businessProcess: pojo.businessProcesses || [],
+        // Preserve existing audit fields if available, or use defaults
+        createdAt: currentData?.createdAt || new Date().toISOString(),
+        updatedAt: currentData?.updatedAt || new Date().toISOString(),
+        createdBy: currentData?.createdBy || '',
+        updatedBy: currentData?.updatedBy || '',
+        status: currentData?.status || 'ACTIVE',
+    };
+};
 
 interface FundObjectiveViewDetailProps {
     viewData: FundObjective | null;
@@ -24,14 +43,16 @@ const FundObjectiveViewDetail: React.FC<FundObjectiveViewDetailProps> = ({ viewD
     const refreshViewData = useCallback(async () => {
         if (viewData?.id) {
             try {
-                const updatedData = await getFundObjectiveById(viewData.id);
-                setCurrentData(updatedData);
+                const updatedPojo = await getFundObjectiveById(viewData.id);
+                // Convert FundObjectivePojo to FundObjective before setting state
+                const convertedData = convertPojoToFundObjective(updatedPojo, currentData);
+                setCurrentData(convertedData);
             } catch (error) {
                 message.error('Failed to fetch updated data');
                 console.error('Error fetching updated data:', error);
             }
         }
-    }, [viewData]);
+    }, [viewData, currentData]);
 
     useEffect(() => {
         if (viewData) {
