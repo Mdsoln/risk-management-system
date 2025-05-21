@@ -436,10 +436,6 @@ const RiskRegister: React.FC = () => {
     const [riskRegistries, setRiskRegistries] = useState<PaginationResult<RiskRegistry>>(initialPaginationData);
     const [loading, setLoading] = useState<boolean>(false);
 
-    useEffect(() => {
-        fetchData(0); // Fetch first page by default
-    }, [fetchData]);
-
     const fetchData = async (page: number) => {
         setLoading(true);
         try {
@@ -451,6 +447,10 @@ const RiskRegister: React.FC = () => {
         }
         setLoading(false);
     };
+
+    useEffect(() => {
+        fetchData(0); // Fetch first page by default
+    }, []);
 
     const showErrorModal = (error: any) => {
         Modal.error({
