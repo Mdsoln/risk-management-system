@@ -41,7 +41,7 @@ const ComplianceDocumentCategoryTable: React.FC = () => {
     // Fetch data when dependencies change
     useEffect(() => {
         fetchData(pagination.current, pagination.pageSize, searchKeyword);
-    }, [pagination.current, pagination.pageSize, searchKeyword]);
+    }, [pagination.current, pagination.pageSize, searchKeyword]); //eslint-disable-line react-hooks/exhaustive-deps
 
     // Fetch compliance document categories
     const fetchData = async (page: number, pageSize: number, keyword: string) => {

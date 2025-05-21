@@ -17,7 +17,7 @@ const AddRiskRegistry: React.FC<AddRiskRegistryProps> = ({ open, onClose, onAdd 
     const onSubmit = async (data: Omit<RiskRegistry, 'id'>) => {
         setLoading(true);
         try {
-            await addRiskRegistry(data);
+            await addRiskRegistry(data as any);
             message.success('Risk registry added successfully');
             onAdd();
             onClose();

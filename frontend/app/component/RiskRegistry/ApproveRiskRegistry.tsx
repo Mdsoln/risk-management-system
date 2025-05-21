@@ -18,7 +18,7 @@ const ApproveRiskRegistry: React.FC<ApproveRiskRegistryProps> = ({ open, onClose
     const handleApprove = async () => {
         setLoading(true);
         try {
-            await updateRiskRegistry(riskRegistry.id, { ...riskRegistry, status: 'Approved' });
+            await updateRiskRegistry(`${riskRegistry.id}`, { ...riskRegistry, status: 'Approved' } as any);
             message.success('Risk registry approved successfully');
             onUpdate(1); // Update first page by default
             onClose();

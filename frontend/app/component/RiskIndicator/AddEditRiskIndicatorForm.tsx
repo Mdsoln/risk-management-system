@@ -133,7 +133,7 @@ const AddEditRiskIndicatorForm: React.ForwardRefRenderFunction<any, AddEditRiskI
                 await onSubmit(sanitizedValues);
             }
         } catch (error: any) {
-            handleErrorResponse(error, setErrorState, (errors), form => handleFormErrors(errors, form));
+            handleErrorResponse(error, setErrorState, (error));
             message.error('Unexpected error occurred while saving Risk Indicator');
         }
     };

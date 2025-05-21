@@ -18,7 +18,7 @@ const EditRiskRegistry: React.FC<EditRiskRegistryProps> = ({ open, onClose, risk
     const handleFinish = async (values: any) => {
         setLoading(true);
         try {
-            await updateRiskRegistry(riskRegistry.id, values);
+            await updateRiskRegistry(`${riskRegistry.id}`, values);
             // message.success('Risk registry updated successfully');
             onUpdate(1); // Update first page by default
             onClose();

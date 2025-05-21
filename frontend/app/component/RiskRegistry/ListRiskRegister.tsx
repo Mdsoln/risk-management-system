@@ -1,3 +1,11 @@
+"use client"
+
+const ListRiskRegister = () => {
+    return (
+        <></>
+    )
+}
+
 // import React, { useEffect, useState } from 'react';
 // import { RiskRegistry } from '../../types/api/RiskRegistry';
 // import { getRiskRegistries, deleteRiskRegistry } from '../../services/api/riskRegistryApi';
@@ -203,4 +211,4 @@
 //     );
 // };
 
-// export default ListRiskRegister;
+export default ListRiskRegister;

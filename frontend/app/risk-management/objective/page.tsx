@@ -3,11 +3,8 @@
 import React from 'react';
 import { Tabs } from 'antd';
 import { TableOutlined, UnorderedListOutlined } from '@ant-design/icons';
-import dynamic from 'next/dynamic';
 import MainLayout from '@/app/component/Layout/MainLayout';
 // import '@/styles/global.css'; // Ensure the path is correct
-
-const ObjectivesTable = dynamic(() => import('../../component/Objective/ObjectivesTable'), { ssr: false });
 
 const ObjectivePage: React.FC = () => {
     const items = [
@@ -19,7 +16,7 @@ const ObjectivePage: React.FC = () => {
                     List of Objectives
                 </span>
             ),
-            children: <ObjectivesTable />,
+            children: <></>,
         },
         {
             key: '2',

@@ -18,7 +18,7 @@ import {
     ErrorState,
 } from '@/app/types/api';
 
-import styles from './FundObjectiveTable.module.css';
+// import styles from './FundObjectiveTable.module.css';
 import ErrorDisplayAlert from '../Alert/ErrorDisplayAlert';
 
 import AddEditFundObjectiveModal from './AddEditFundObjectiveModal';
@@ -49,7 +49,7 @@ const FundObjectiveTable: React.FC = () => {
     // Fetch data
     useEffect(() => {
         fetchData(pagination.current, pagination.pageSize, searchKeyword);
-    }, [pagination.current, pagination.pageSize, searchKeyword]);
+    }, [pagination.current, pagination.pageSize, searchKeyword]); //eslint-disable-line react-hooks/exhaustive-deps
 
     // Fetch Fund Objectives
     const fetchData = async (page: number, pageSize: number, keyword: string) => {

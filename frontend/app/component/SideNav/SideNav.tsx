@@ -1,6 +1,6 @@
 "use client";
 // SideNav.tsx
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Menu, Layout, Drawer, Button } from 'antd';
 import {
@@ -87,7 +87,7 @@ const SideNav: React.FC = () => {
         });
     };
 
-    const findKeysForPath = (items: MenuItem[], pathSegments: string[], keys: string[] = []): string[] => {
+    const findKeysForPath = useCallback((items: MenuItem[], pathSegments: string[], keys: string[] = []): string[] => {
         for (const item of items) {
             if (item.key === pathSegments[0]) {
                 keys.push(item.key);
@@ -98,14 +98,14 @@ const SideNav: React.FC = () => {
             }
         }
         return keys;
-    };
+    }, []);
 
-    const getDefaultSelectedKeysAndOpenKeys = (pathname: string): { selectedKeys: string[], openKeys: string[] } => {
+    const getDefaultSelectedKeysAndOpenKeys = useCallback((pathname: string): { selectedKeys: string[], openKeys: string[] } => {
         const pathSegments = pathname.split('/').filter(Boolean);
         const selectedKeys = [pathSegments.join('-')];
         const openKeys = findKeysForPath(menuItems, pathSegments);
         return { selectedKeys, openKeys };
-    };
+    }, [findKeysForPath, menuItems]);
 
     useEffect(() => {
         const handleResize = () => {
@@ -149,6 +149,7 @@ const SideNav: React.FC = () => {
                 <div className={styles.logo}>
                     <div className={styles.logoDiv}>
                         <div className={styles.logoSubDiv}>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src="/images/logo-white.png" alt="Logo" />
                         </div>
                     </div>

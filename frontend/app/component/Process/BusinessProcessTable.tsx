@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Table, Button, Dropdown, Menu, Input, Skeleton, message, Space } from 'antd';
+import { useState, useEffect } from 'react';
+import { Table, Button, Dropdown, Menu, Input, message } from 'antd';
 import {
     MoreOutlined,
     EditOutlined,
-    PlusOutlined,
     DeleteOutlined,
-    SearchOutlined,
     EyeOutlined,
 } from '@ant-design/icons';
 
@@ -53,7 +51,7 @@ const BusinessProcessTable: React.FC = () => {
         fetchData(pagination.current, pagination.pageSize, searchKeyword);
         fetchFundObjectives();
         fetchDepartments();
-    }, [pagination.current, pagination.pageSize, searchKeyword]);
+    }, [pagination.current, pagination.pageSize, searchKeyword]); //eslint-disable-line react-hooks/exhaustive-deps
 
     const fetchData = async (page: number, pageSize: number, keyword: string) => {
         setLoading(true);

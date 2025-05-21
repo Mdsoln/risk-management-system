@@ -44,7 +44,7 @@ const BcmResourceAcquisitionTable: React.FC = () => {
     // Fetch data
     useEffect(() => {
         fetchData(pagination.current, pagination.pageSize, searchKeyword);
-    }, [pagination.current, pagination.pageSize, searchKeyword]);
+    }, [pagination.current, pagination.pageSize, searchKeyword]); //eslint-disable-line react-hooks/exhaustive-deps
 
     const fetchData = async (page: number, pageSize: number, keyword: string) => {
         setLoading(true);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Table, TablePaginationConfig, Button, Space } from 'antd';
 import { ReloadOutlined } from '@ant-design/icons';
 import ErrorAlert from '../Alert/ErrorAlert';
@@ -29,7 +29,7 @@ const ReusableTable = <T extends TableItem>({ columns, tableKey, fetchTableData,
     const [reloadLoading, setReloadLoading] = React.useState(false); // Add state for reload button
     const initialFetchRef = React.useRef(true);
 
-    const fetchData = async (page: number = 1, pageSize: number = 10) => {
+    const fetchData = useCallback(async (page: number = 1, pageSize: number = 10) => {
         setLoading(true);
         setError(null); // Reset error before fetching data
         try {
@@ -48,7 +48,7 @@ const ReusableTable = <T extends TableItem>({ columns, tableKey, fetchTableData,
         } finally {
             setLoading(false);
         }
-    };
+    }, [fetchTableData]);
 
     React.useEffect(() => {
         if (initialFetchRef.current) {
