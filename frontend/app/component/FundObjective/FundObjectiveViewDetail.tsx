@@ -5,25 +5,7 @@ import { BarsOutlined } from '@ant-design/icons';
 import DisplayTitle from '../Display/DisplayTitle';
 import FundObjectiveOnlyDetail from './FundObjectiveOnlyDetail'; // Import the new component
 import { getFundObjectiveById } from '@/app/services/api/fundObjectiveApi';
-
-// Conversion function to transform FundObjectivePojo to FundObjective
-const convertPojoToFundObjective = (pojo: FundObjectivePojo, currentData?: FundObjective | null): FundObjective => {
-    return {
-        id: pojo.id,
-        name: pojo.name,
-        description: pojo.description,
-        startDateTime: pojo.startDateTime,
-        endDateTime: pojo.endDateTime,
-        // Use businessProcesses from pojo, but rename to match FundObjective structure
-        businessProcess: pojo.businessProcesses || [],
-        // Preserve existing audit fields if available, or use defaults
-        createdAt: currentData?.createdAt || new Date().toISOString(),
-        updatedAt: currentData?.updatedAt || new Date().toISOString(),
-        createdBy: currentData?.createdBy || '',
-        updatedBy: currentData?.updatedBy || '',
-        status: currentData?.status || 'ACTIVE',
-    };
-};
+import { convertPojoToFundObjective } from '@/app/utils/converters';
 
 interface FundObjectiveViewDetailProps {
     viewData: FundObjective | null;

@@ -86,6 +86,7 @@ import {
     BusinessProcess,
 } from '@/app/types/api';
 import { API_V1 } from '@/app/constants/api';
+import { convertPojoToBusinessProcess } from '@/app/utils/converters';
 
 const BASE_URL = '/api/v1/business-process';
 
@@ -169,7 +170,7 @@ export const searchBusinessProcesses = async (name: string): Promise<BusinessPro
 // Search business processes by name
 export const searchBusinessProcessesByName = async (name: string): Promise<BusinessProcess[]> => {
     const url = `${API_V1}/business-process/search`;
-    const response = await axios.get<ApiResponse<BusinessProcess[] | BusinessProcess[][]>>(url, {
+    const response = await axios.get<ApiResponse<BusinessProcessPojo[] | BusinessProcessPojo[][]>>(url, {
         params: {
             name,
         },
@@ -178,10 +179,11 @@ export const searchBusinessProcessesByName = async (name: string): Promise<Busin
 
     // Check if the data contains nested arrays and flatten them if necessary
     if (Array.isArray(data) && data.some(item => Array.isArray(item))) {
-        data = data.flat() as BusinessProcess[];
+        data = data.flat() as BusinessProcessPojo[];
     }
 
-    return data as BusinessProcess[];
+    // Convert each BusinessProcessPojo to BusinessProcess
+    return (data as BusinessProcessPojo[]).map(pojo => convertPojoToBusinessProcess(pojo));
 };
 
 
@@ -210,6 +212,12 @@ export const getBusinessProcesses = async (
     const queryParams = new URLSearchParams(params as any).toString();
     const url = `${API_V1}/business-process/list?${queryParams}`;
 
-    const response = await axios.get<{ data: PaginationResult<BusinessProcess> }>(url);
-    return response.data.data;
+    const response = await axios.get<{ data: PaginationResult<BusinessProcessPojo> }>(url);
+
+    // Convert the BusinessProcessPojo objects to BusinessProcess objects
+    const result = response.data.data;
+    return {
+        ...result,
+        content: result.content.map(pojo => convertPojoToBusinessProcess(pojo))
+    };
 };
