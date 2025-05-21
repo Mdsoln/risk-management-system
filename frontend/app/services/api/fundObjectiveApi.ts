@@ -136,7 +136,7 @@ export const addFundObjective = async (dto: FundObjectiveDTO): Promise<FundObjec
 /**
  * Update an existing Fund Objective by ID.
  */
-export const updateFundObjective = async (id: string, data: FundObjective): Promise<ApiResponse<FundObjective>> => {
+export const updateFundObjective = async (id: string, data: FundObjective | FundObjectiveDTO): Promise<ApiResponse<FundObjective>> => {
     try {
         const response = await fetch(`/api/fund-objective/${id}`, {
             method: 'PUT',
