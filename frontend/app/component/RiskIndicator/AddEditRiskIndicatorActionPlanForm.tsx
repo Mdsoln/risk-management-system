@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useImperativeHandle, forwardRef } from 'react';
+import React, { useState, useEffect, useImperativeHandle, forwardRef, useCallback } from 'react';
 import { Form, Input, Button, Select, Skeleton, message, Row, Col, Modal } from 'antd';
 import { RiskIndicatorActionPlanDto, ErrorState, Department, Directorate, RiskIndicatorDto } from '@/app/types/api';
 import { getRiskOwners } from '@/app/services/api/departmentOwner';
@@ -23,6 +23,12 @@ const AddEditRiskIndicatorActionPlanForm: React.ForwardRefRenderFunction<any, Ad
     const [directorates, setDirectorates] = useState<Directorate[]>([]);
     const [description, setDescription] = useState(initialValues?.description || '');
     const [selectedRiskIndicatorId, setSelectedRiskIndicatorId] = useState<string | undefined>(initialValues?.riskIndicatorId);
+
+    const clearForm = useCallback(() => {
+        form.resetFields();
+        setDescription('');
+        setErrorState(null);
+    }, [form]);
 
     useEffect(() => {
         clearForm();
@@ -72,12 +78,6 @@ const AddEditRiskIndicatorActionPlanForm: React.ForwardRefRenderFunction<any, Ad
             handleErrorResponse(error, setErrorState, (errors) => handleFormErrors(errors, form), form);
             message.error('Unexpected error occurred while saving Action Plan');
         }
-    };
-
-    const clearForm = () => {
-        form.resetFields();
-        setDescription('');
-        setErrorState(null);
     };
 
     const handleCloseErrorAlert = () => {

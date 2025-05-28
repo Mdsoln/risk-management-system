@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Table, Button, Dropdown, Menu, message, Input, Skeleton, Space } from 'antd';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Table, Button, Dropdown, Menu, message, Input, Skeleton, Space, FormInstance } from 'antd';
 import { MoreOutlined, RightCircleFilled, DownCircleFilled, EyeOutlined, EditOutlined, PlusOutlined, DeleteOutlined, SearchOutlined, ClockCircleOutlined, InfoCircleOutlined } from '@ant-design/icons';
 import { getRisks, getRiskById, deleteRisk } from '../../services/api/riskApi';
 import ViewRiskModal from './ViewRiskModal';
@@ -32,11 +32,14 @@ const RiskTable: React.FC = () => {
 
     const debouncedSearchKeyword = useDebounce(searchKeyword, 300);
 
-    useEffect(() => {
-        fetchTableData(pagination.current, pagination.pageSize, debouncedSearchKeyword);
-    }, [pagination, debouncedSearchKeyword, fetchTableData]);
+    const handleFormErrors = useCallback((errors: FieldError[]) => {
+        const formFields = errors.map(error => ({
+            name: error.field,
+            errors: [error.message],
+        }));
+    }, [])
 
-    const fetchTableData = async (page: number, pageSize: number, keyword: string) => {
+    const fetchTableData = useCallback(async (page: number, pageSize: number, keyword: string) => {
         setLoading(true);
         setErrorState(null);
         try {
@@ -49,7 +52,11 @@ const RiskTable: React.FC = () => {
         } finally {
             setLoading(false);
         }
-    };
+    }, [setDataSource, setPagination, handleFormErrors]);
+
+    useEffect(() => {
+        fetchTableData(pagination.current, pagination.pageSize, debouncedSearchKeyword);
+    }, [pagination, debouncedSearchKeyword, fetchTableData]);
 
     const handleTableChange = (pagination: any, filters: any, sorter: any) => {
         setPagination({ current: pagination.current, pageSize: pagination.pageSize, total: pagination.total });
@@ -204,13 +211,6 @@ const RiskTable: React.FC = () => {
             ),
         },
     ];
-
-    const handleFormErrors = (errors: FieldError[]) => {
-        const formFields = errors.map(error => ({
-            name: error.field,
-            errors: [error.message],
-        }));
-    };
 
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchKeyword(event.target.value);

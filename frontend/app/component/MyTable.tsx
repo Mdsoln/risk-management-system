@@ -440,7 +440,7 @@ const RiskRegister: React.FC = () => {
         setLoading(true);
         try {
             const data = await getRiskRegistryList(page, riskRegistries.pageSize);
-            setRiskRegistries(data);
+            setRiskRegistries(data as any);
         } catch (error) {
             console.error('Error fetching data:', error);
             showErrorModal(error);
@@ -450,7 +450,7 @@ const RiskRegister: React.FC = () => {
 
     useEffect(() => {
         fetchData(0); // Fetch first page by default
-    }, []);
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     const showErrorModal = (error: any) => {
         Modal.error({
