@@ -27,10 +27,44 @@ quarkus:
     password: mdsoln
     jdbc:
       url: jdbc:postgresql://localhost:5432/mydatabase
+    # Connection pool settings
+    jdbc-pool:
+      min-size: 5
+      max-size: 20
+      initial-size: 5
+      background-validation-interval: 2M
+      acquisition-timeout: 5
+      leak-detection-interval: 1M
+    # Statement timeout settings
+    jdbc-statement:
+      timeout: 300
 
   hibernate-orm:
     database:
       generation: update
+    # Configure statement batching for better performance
+    jdbc:
+      statement-batch-size: 20
+    # Configure transaction timeout
+    transaction:
+      timeout: 600
+    properties:
+      hibernate:
+        # Configure batch fetching
+        default_batch_fetch_size: 20
+        # Configure order inserts and updates
+        order_inserts: true
+        order_updates: true
+        # Configure Envers
+        envers:
+          autoRegisterListeners: true
+          revision_field_name: rev
+          revision_type_field_name: revtype
+          track_entities_changed_in_revision: true
+          global_with_modified_flag: true
+          store_data_at_delete: true
+          # Configure audit strategy
+          audit_strategy: org.hibernate.envers.strategy.DefaultAuditStrategy
 
   smallrye-json:
     date-format: "yyyy-MM-dd'T'HH:mm:ss"

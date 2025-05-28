@@ -37,22 +37,32 @@ public class BusinessProcessSeeder {
                 if (fundObjectives.isEmpty()) {
                     throw new RuntimeException("No FundObjectives found to link with Business Processes.");
                 }
-                
+
                 if (departments.isEmpty()) {
                     throw new RuntimeException("No Departments found to link with Business Processes.");
                 }
 
-                int numberOfBusinessProcesses = 100000;
+                // Reduce the number of business processes to a more reasonable amount
+                int numberOfBusinessProcesses = 100;
+                // Use a batch size to commit in smaller chunks
+                int batchSize = 10;
+
                 for (int i = 1; i <= numberOfBusinessProcesses; i++) {
                     BusinessProcess businessProcess = new BusinessProcess();
                     businessProcess.setName("Business Process " + i);
-                    businessProcess.setDescription(SeederHelper.generateDescription(1000));
+                    businessProcess.setDescription(SeederHelper.generateDescription(100)); // Shorter description
                     businessProcess.setFundObjective(fundObjectives.get(i % fundObjectives.size()));
                     businessProcess.setBusinessProcessOwnerDepartment(departments.get(i % departments.size()));
                     businessProcess.setStartDateTime(LocalDateTime.now().minusDays(1));
                     businessProcess.setEndDateTime(LocalDateTime.now().plusDays(30));
 
                     businessProcessRepository.persist(businessProcess);
+
+                    // Flush and clear the persistence context periodically to avoid memory issues
+                    if (i % batchSize == 0) {
+                        businessProcessRepository.getEntityManager().flush();
+                        businessProcessRepository.getEntityManager().clear();
+                    }
                 }
             }
         } catch (Exception e) {

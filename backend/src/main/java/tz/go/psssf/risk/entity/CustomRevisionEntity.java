@@ -1,22 +1,46 @@
 package tz.go.psssf.risk.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import org.hibernate.envers.DefaultRevisionEntity;
 import org.hibernate.envers.RevisionEntity;
+import org.hibernate.envers.RevisionNumber;
+import org.hibernate.envers.RevisionTimestamp;
 
 /**
- * Custom revision entity that extends DefaultRevisionEntity.
- * This class is created to fix the Hibernate Envers error:
- * "HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; 
- * expected type : org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; 
- * encountered type : jakarta.persistence.metamodel.MappedSuperclassType"
+ * Custom revision entity for Hibernate Envers.
+ * This class is created to fix the Hibernate Envers error and ensure proper revision tracking.
  */
 @Entity
 @Table(name = "revinfo")
 @RevisionEntity
-public class CustomRevisionEntity extends DefaultRevisionEntity {
-    // No additional fields or methods needed
-    // This class exists solely to provide the @Entity annotation
-    // to fix the Hibernate Envers metamodel generation issue
+public class CustomRevisionEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @RevisionNumber
+    @Column(name = "rev", nullable = false)
+    private int id;
+
+    @RevisionTimestamp
+    @Column(name = "revtstmp", nullable = false)
+    private long timestamp;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
+    }
 }

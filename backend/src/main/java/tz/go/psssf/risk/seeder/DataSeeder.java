@@ -84,68 +84,79 @@ public class DataSeeder {
     RiskStatusSeeder riskStatusSeeder;
 
 
-    
+
     @Inject
     RoleAndPermissionsSeeder roleAndPermissionsSeeder;
-    
+
     @Inject
     UserTypeSeeder userTypeSeeder;
-    
+
     @Inject
     DirectorateSeeder directorateSeeder;
-    
+
     @Inject
     UserSeeder userSeeder;
-    
-    
+
+
     // compliance
     @Inject
     ComplianceSeeder complianceSeeder;
 
-    @Transactional
+    // Remove @Transactional from the main method to allow individual seeders to manage their own transactions
     public void seed(@Observes StartupEvent event) {
-    	
-    	
-        log.info("########################################################");
-        log.info("########################################################");
-        log.info("########################################################");
-        log.info("########################################################");
-        log.info("########################  START SEED ################################");
-        log.info("########################################################");
-        log.info("########################################################");
-        log.info("########################################################");
-        
-//      directorateSeeder.seed();
-//      departmentSeeder.seed();
-//      
-//
-//         riskStatusSeeder.seed();
-//         riskAreaSeeder.seed();
-//         measurementSeeder.seed();
-//         thresholdCategorySeeder.seed();
-//         comparisonOperatorSeeder.seed();
-//         userTypeSeeder.seed();
-//         userSeeder.seed();
-//        
-//         roleAndPermissionsSeeder.seed();
-//         likelihoodSeeder.seed();
-//         impactSeeder.seed();
-//         monitoringFrequencySeeder.seed();
-//         fundObjectiveSeeder.seed();
-//         businessProcessSeeder.seed();
-//        
-//        complianceSeeder.seedComplianceData();
+        try {
+            log.info("########################################################");
+            log.info("########################################################");
+            log.info("########################################################");
+            log.info("########################################################");
+            log.info("########################  START SEED ################################");
+            log.info("########################################################");
+            log.info("########################################################");
+            log.info("########################################################");
 
-         
+            // Execute each seeder in its own try-catch block to prevent one failure from stopping others
+            seedWithErrorHandling("Directorate", () -> directorateSeeder.seed());
+            seedWithErrorHandling("Department", () -> departmentSeeder.seed());
 
-        
-        log.info("########################################################");
-        log.info("########################################################");
-        log.info("########################################################");
-        log.info("########################################################");
-        log.info("########################  END SEED ################################");
-        log.info("########################################################");
-        log.info("########################################################");
-        log.info("########################################################");
+            seedWithErrorHandling("RiskStatus", () -> riskStatusSeeder.seed());
+            seedWithErrorHandling("RiskArea", () -> riskAreaSeeder.seed());
+            seedWithErrorHandling("Measurement", () -> measurementSeeder.seed());
+            seedWithErrorHandling("ThresholdCategory", () -> thresholdCategorySeeder.seed());
+            seedWithErrorHandling("ComparisonOperator", () -> comparisonOperatorSeeder.seed());
+            seedWithErrorHandling("UserType", () -> userTypeSeeder.seed());
+            seedWithErrorHandling("User", () -> userSeeder.seed());
+
+            seedWithErrorHandling("RoleAndPermissions", () -> roleAndPermissionsSeeder.seed());
+            seedWithErrorHandling("Likelihood", () -> likelihoodSeeder.seed());
+            seedWithErrorHandling("Impact", () -> impactSeeder.seed());
+            seedWithErrorHandling("MonitoringFrequency", () -> monitoringFrequencySeeder.seed());
+            seedWithErrorHandling("FundObjective", () -> fundObjectiveSeeder.seed());
+            seedWithErrorHandling("BusinessProcess", () -> businessProcessSeeder.seed());
+
+            seedWithErrorHandling("Compliance", () -> complianceSeeder.seedComplianceData());
+
+            log.info("########################################################");
+            log.info("########################################################");
+            log.info("########################################################");
+            log.info("########################################################");
+            log.info("########################  END SEED ################################");
+            log.info("########################################################");
+            log.info("########################################################");
+            log.info("########################################################");
+        } catch (Exception e) {
+            log.error("Error during seeding process", e);
+        }
+    }
+
+    // Helper method to execute a seeder with error handling
+    private void seedWithErrorHandling(String seederName, Runnable seederMethod) {
+        try {
+            log.info("Starting " + seederName + " seeding...");
+            seederMethod.run();
+            log.info(seederName + " seeding completed successfully.");
+        } catch (Exception e) {
+            log.error("Error during " + seederName + " seeding", e);
+            // Continue with other seeders even if this one fails
+        }
     }
 }

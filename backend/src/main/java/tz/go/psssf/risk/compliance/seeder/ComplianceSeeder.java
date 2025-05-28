@@ -119,8 +119,11 @@ import jakarta.transaction.Transactional;
 import org.jboss.logging.Logger;
 import tz.go.psssf.risk.compliance.entity.ComplianceDocumentCategory;
 import tz.go.psssf.risk.compliance.entity.ComplianceEntityCategory;
+import tz.go.psssf.risk.compliance.entity.ComplianceStatus;
 import tz.go.psssf.risk.compliance.repository.ComplianceDocumentCategoryRepository;
 import tz.go.psssf.risk.compliance.repository.ComplianceEntityCategoryRepository;
+import tz.go.psssf.risk.compliance.repository.ComplianceStatusRepository;
+import tz.go.psssf.risk.enums.RecordStatus;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -130,10 +133,12 @@ public class ComplianceSeeder {
 
     @Inject
     ComplianceDocumentCategoryRepository complianceDocumentCategoryRepository;
-    
+
     @Inject
     ComplianceEntityCategoryRepository complianceEntityCategoryRepository;
 
+    @Inject
+    ComplianceStatusRepository complianceStatusRepository;
 
     @Inject
     Logger log;
@@ -143,6 +148,7 @@ public class ComplianceSeeder {
         log.info("Starting Compliance Data Seeding...");
         seedComplianceDocumentCategories();
         seedComplianceEntityCategories(); // Added for Compliance Entity Categories
+        seedComplianceStatuses(); // Added for Compliance Statuses
         log.info("Compliance Data Seeding Completed!");
     }
 
@@ -198,26 +204,26 @@ public class ComplianceSeeder {
             log.error("Error saving Compliance Document Category", e);
         }
     }
-    
+
 
 	private void seedComplianceEntityCategories() {
 	    ObjectMapper mapper = new ObjectMapper();
 	    mapper.registerModule(new JavaTimeModule()); // Handle LocalDateTime serialization
-	
+
 	    try (InputStream inputStream = Thread.currentThread().getContextClassLoader()
 	            .getResourceAsStream("data/compliance-entity-category.json")) {
-	
+
 	        if (inputStream == null) {
 	            throw new IOException("File compliance-entity-category.json not found");
 	        }
-	
+
 	        JsonNode rootNode = mapper.readTree(inputStream);
-	
+
 	        for (JsonNode categoryNode : rootNode) {
 	            // Convert JSON node to ComplianceEntityCategory entity
 	            ComplianceEntityCategory entityCategory = 
 	                mapper.convertValue(categoryNode, ComplianceEntityCategory.class);
-	
+
 	            // Validate data
 	            if (entityCategory.getCode() == null || entityCategory.getCode().isBlank()) {
 	                throw new IllegalArgumentException("Code cannot be null or blank.");
@@ -225,13 +231,13 @@ public class ComplianceSeeder {
 	            if (entityCategory.getName() == null || entityCategory.getName().isBlank()) {
 	                throw new IllegalArgumentException("Name cannot be null or blank.");
 	            }
-	
+
 	            log.info("Processing Compliance Entity Category: " + entityCategory.getName());
-	
+
 	            // Check if the category already exists
 	            ComplianceEntityCategory existingCategory = 
 	                complianceEntityCategoryRepository.find("code = ?1", entityCategory.getCode()).firstResult();
-	
+
 	            if (existingCategory != null) {
 	                // Update existing category
 	                existingCategory.setName(entityCategory.getName());
@@ -244,7 +250,7 @@ public class ComplianceSeeder {
 	                log.info("Created new Compliance Entity Category: " + entityCategory.getName());
 	            }
 	        }
-	
+
 	        log.info("Compliance Entity Category seeding completed successfully.");
 	    } catch (IOException e) {
 	        log.error("Error reading compliance-entity-category.json", e);
@@ -254,5 +260,55 @@ public class ComplianceSeeder {
 	}
 
 
-}
+    private void seedComplianceStatuses() {
+        log.info("Starting Compliance Status seeding...");
 
+        try {
+            // Define the three compliance statuses
+            ComplianceStatus fullCompliance = new ComplianceStatus();
+            fullCompliance.setStatusName("Full Compliance");
+            fullCompliance.setScore(1.0);
+            fullCompliance.setDescription("Entity is fully compliant with all requirements and regulations.");
+            fullCompliance.setStatus(RecordStatus.ACTIVE);
+
+            ComplianceStatus partialCompliance = new ComplianceStatus();
+            partialCompliance.setStatusName("Partial Compliance");
+            partialCompliance.setScore(0.5);
+            partialCompliance.setDescription("Entity is partially compliant with requirements and regulations, with some areas needing improvement.");
+            partialCompliance.setStatus(RecordStatus.ACTIVE);
+
+            ComplianceStatus nonCompliance = new ComplianceStatus();
+            nonCompliance.setStatusName("Non-Compliance");
+            nonCompliance.setScore(0.0);
+            nonCompliance.setDescription("Entity is not compliant with requirements and regulations, requiring immediate corrective actions.");
+            nonCompliance.setStatus(RecordStatus.ACTIVE);
+
+            // Check if statuses already exist and create/update them
+            createOrUpdateComplianceStatus(fullCompliance);
+            createOrUpdateComplianceStatus(partialCompliance);
+            createOrUpdateComplianceStatus(nonCompliance);
+
+            log.info("Compliance Status seeding completed successfully.");
+        } catch (Exception e) {
+            log.error("Error seeding Compliance Statuses", e);
+        }
+    }
+
+    private void createOrUpdateComplianceStatus(ComplianceStatus status) {
+        // Check if a status with the same name already exists
+        ComplianceStatus existingStatus = complianceStatusRepository.find("statusName", status.getStatusName()).firstResult();
+
+        if (existingStatus != null) {
+            // Update existing status
+            existingStatus.setScore(status.getScore());
+            existingStatus.setDescription(status.getDescription());
+            existingStatus.setStatus(status.getStatus());
+            complianceStatusRepository.getEntityManager().merge(existingStatus);
+            log.info("Updated existing Compliance Status: " + existingStatus.getStatusName());
+        } else {
+            // Create new status
+            complianceStatusRepository.persist(status);
+            log.info("Created new Compliance Status: " + status.getStatusName());
+        }
+    }
+}
