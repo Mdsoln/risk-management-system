@@ -1,6 +1,7 @@
 package tz.go.psssf.risk.compliance.service;
 
 import io.quarkus.hibernate.orm.panache.PanacheQuery;
+import io.smallrye.mutiny.Uni;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
@@ -16,8 +17,11 @@ import tz.go.psssf.risk.compliance.mapper.RegulatoryComplianceMatrixMapper;
 import tz.go.psssf.risk.compliance.pojo.RegulatoryComplianceMatrixPojo;
 import tz.go.psssf.risk.compliance.repository.RegulatoryComplianceMatrixRepository;
 import tz.go.psssf.risk.helper.CustomQueryHelper;
+import tz.go.psssf.risk.helper.JsonConverter;
 import tz.go.psssf.risk.helper.PaginationHelper;
 import tz.go.psssf.risk.helper.ResponseHelper;
+import tz.go.psssf.risk.report.entity.ReportDashboard;
+import tz.go.psssf.risk.report.repository.ReportDashboardRepository;
 import tz.go.psssf.risk.response.PaginatedResponse;
 import tz.go.psssf.risk.response.ResponseWrapper;
 
@@ -38,7 +42,14 @@ public class RegulatoryComplianceMatrixService {
     @Inject
     RegulatoryComplianceMatrixMapper mapper;
 
+    @Inject
+    ReportDashboardRepository reportDashboardRepository;
+
     private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ISO_DATE_TIME;
+
+    // Constants for report codes
+    private static final String REGULATORY_COMPLIANCE_MATRIX_REPORT_CODE = "REGULATORY_COMPLIANCE_MATRIX_REPORT";
+    private static final String REGULATORY_COMPLIANCE_MATRIX_REPORT_NAME = "Regulatory Compliance Matrix Report";
 
     // Searchable fields
     private static final List<String> SEARCHABLE_FIELDS = Arrays.asList("itemNumber", "details");
@@ -157,6 +168,69 @@ public class RegulatoryComplianceMatrixService {
             return ResponseHelper.createSuccessResponse(null);
         } catch (Exception e) {
             log.error("Error deleting RegulatoryComplianceMatrix", e);
+            return ResponseHelper.createErrorResponse(e);
+        }
+    }
+
+    // Helper method to find or create a report
+    private ReportDashboard findOrCreateReport(String code, String name, String payload) {
+        ReportDashboard existingReport = reportDashboardRepository.find("code", code).firstResult();
+
+        if (existingReport != null) {
+            existingReport.setPayload(payload);
+            reportDashboardRepository.persist(existingReport);
+            return existingReport;
+        } else {
+            ReportDashboard newReport = new ReportDashboard();
+            newReport.setCode(code);
+            newReport.setName(name);
+            newReport.setPayload(payload);
+            reportDashboardRepository.persist(newReport);
+            return newReport;
+        }
+    }
+
+    // Generate Regulatory Compliance Matrix Report
+    @Transactional
+    public ResponseWrapper<Object> generateRegulatoryComplianceMatrixReport() {
+        try {
+            // Get all regulatory compliance matrices
+            List<RegulatoryComplianceMatrix> matrices = repository.findAll().list();
+
+            // Convert to POJOs
+            List<RegulatoryComplianceMatrixPojo> matrixPojos = matrices.stream()
+                    .map(mapper::toPojo)
+                    .collect(Collectors.toList());
+
+            // Convert to JSON payload
+            String payload = JsonConverter.toJson(matrixPojos);
+
+            // Save report
+            findOrCreateReport(REGULATORY_COMPLIANCE_MATRIX_REPORT_CODE, REGULATORY_COMPLIANCE_MATRIX_REPORT_NAME, payload);
+
+            return ResponseHelper.createSuccessResponse(matrixPojos);
+        } catch (Exception e) {
+            log.error("Error generating Regulatory Compliance Matrix Report", e);
+            return ResponseHelper.createErrorResponse(e);
+        }
+    }
+
+    // Get Regulatory Compliance Matrix Report
+    public ResponseWrapper<Object> getRegulatoryComplianceMatrixReport() {
+        try {
+            ReportDashboard report = reportDashboardRepository.find("code", REGULATORY_COMPLIANCE_MATRIX_REPORT_CODE).firstResult();
+
+            if (report == null) {
+                // Generate report if it doesn't exist
+                return generateRegulatoryComplianceMatrixReport();
+            }
+
+            // Convert payload to object
+            Object reportData = JsonConverter.fromJson(report.getPayload(), Object.class);
+
+            return ResponseHelper.createSuccessResponse(reportData);
+        } catch (Exception e) {
+            log.error("Error getting Regulatory Compliance Matrix Report", e);
             return ResponseHelper.createErrorResponse(e);
         }
     }

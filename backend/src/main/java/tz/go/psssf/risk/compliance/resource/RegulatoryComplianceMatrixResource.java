@@ -70,4 +70,16 @@ public class RegulatoryComplianceMatrixResource {
     public ResponseWrapper<Void> delete(@PathParam("id") String id) {
         return service.delete(id);
     }
+
+    @GET
+    @Path("/report")
+    public ResponseWrapper<Object> getReport() {
+        return service.getRegulatoryComplianceMatrixReport();
+    }
+
+    @POST
+    @Path("/report/generate")
+    public ResponseWrapper<Object> generateReport() {
+        return service.generateRegulatoryComplianceMatrixReport();
+    }
 }

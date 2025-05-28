@@ -120,6 +120,7 @@ const initialState: MenuState = {
                 { key: 'compliance/compliance-document-category', label: 'Document Category' },
                 { key: 'compliance/compliance-entity', label: 'Compliance Entity' },
                 { key: 'compliance/compliance-entity-category', label: 'Entity Category' },
+                { key: 'compliance/regulatory-compliance-matrix', label: 'Compliance Matrix Report' },
             ],
         },
 
