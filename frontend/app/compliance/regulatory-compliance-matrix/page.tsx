@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Card, CardContent, Typography, Box, Button, CircularProgress, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { Card, CardContent, Typography, Box, Button, CircularProgress, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import { RegulatoryComplianceMatrixPojo, RegulatoryComplianceMatrixSectionPojo } from '@/app/types/api';
 import axios from 'axios';
 import { API_BASE_URL } from '@/app/constants/api';

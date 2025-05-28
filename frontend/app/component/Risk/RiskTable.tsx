@@ -45,7 +45,23 @@ const RiskTable: React.FC = () => {
         try {
             const data: PaginationResult<Risk> = await getRisks(page - 1, pageSize, keyword); // Adjust page index for API
             setDataSource(data.items);
-            setPagination({ current: data.currentPage + 1, pageSize: data.pageSize, total: data.totalItems });
+            setPagination(prev => {
+                const newPagination = {
+                    current: data.currentPage + 1,
+                    pageSize: data.pageSize,
+                    total: data.totalItems,
+                };
+
+                // Only update if different
+                if (
+                    prev.current !== newPagination.current ||
+                    prev.pageSize !== newPagination.pageSize ||
+                    prev.total !== newPagination.total
+                ) {
+                    return newPagination;
+                }
+                return prev;
+            });
         } catch (error: any) {
             handleErrorResponse(error, setErrorState, handleFormErrors);
             message.error('Error fetching data');
@@ -56,7 +72,7 @@ const RiskTable: React.FC = () => {
 
     useEffect(() => {
         fetchTableData(pagination.current, pagination.pageSize, debouncedSearchKeyword);
-    }, [pagination, debouncedSearchKeyword, fetchTableData]);
+    }, [pagination.pageSize, debouncedSearchKeyword, fetchTableData, pagination]);
 
     const handleTableChange = (pagination: any, filters: any, sorter: any) => {
         setPagination({ current: pagination.current, pageSize: pagination.pageSize, total: pagination.total });
