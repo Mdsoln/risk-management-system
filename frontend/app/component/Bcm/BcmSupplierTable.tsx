@@ -167,7 +167,7 @@ const BcmSupplierTable: React.FC = () => {
             key: 'actions',
             render: (_: any, record: BcmSupplierPojo) => (
                 <Dropdown
-                    overlay={<Menu items={getRowMenuItems(record)} />}
+                    menu={{ items: getRowMenuItems(record) }}
                     trigger={['click']}
                 >
                     <Button type="text">

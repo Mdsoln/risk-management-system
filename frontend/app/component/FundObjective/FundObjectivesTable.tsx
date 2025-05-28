@@ -157,8 +157,8 @@ const FundObjectiveTable: React.FC = () => {
             title: 'Actions',
             key: 'actions',
             render: (_: any, record: FundObjectivePojo) => (
-                <Dropdown overlay={<Menu
-                    items={[
+                <Dropdown menu={{
+                    items: [
                         {
                             key: 'view',
                             icon: <EyeOutlined />,
@@ -177,8 +177,8 @@ const FundObjectiveTable: React.FC = () => {
                             label: 'Delete',
                             onClick: () => handleDelete(record.id)
                         },
-                    ]}
-                />} trigger={['click']}>
+                    ]
+                }} trigger={['click']}>
                     <Button type="text">
                         <MoreOutlined />
                     </Button>

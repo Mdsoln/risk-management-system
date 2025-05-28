@@ -29,44 +29,63 @@ const HeaderLayout: React.FC<HeaderLayoutProps> = ({ className }) => {
         console.log('Current User:', user.currentUser);
     }, [user.currentUser]);
 
-    const profileMenu = (
-        <Menu>
-            <Menu.Item key="1" icon={<UserOutlined />}>
-                Profile
-            </Menu.Item>
-            <Menu.Item key="2" icon={<LockOutlined />}>
-                Change Password
-            </Menu.Item>
-            <Menu.Item key="3" icon={<SettingOutlined />}>
-                Settings
-            </Menu.Item>
-            <Menu.Divider />
-            <Menu.Item key="4" icon={<LogoutOutlined />}>
-                Logout
-            </Menu.Item>
-        </Menu>
-    );
+    const profileMenuItems = [
+        {
+            key: '1',
+            icon: <UserOutlined />,
+            label: 'Profile',
+        },
+        {
+            key: '2',
+            icon: <LockOutlined />,
+            label: 'Change Password',
+        },
+        {
+            key: '3',
+            icon: <SettingOutlined />,
+            label: 'Settings',
+        },
+        {
+            type: 'divider',
+        },
+        {
+            key: '4',
+            icon: <LogoutOutlined />,
+            label: 'Logout',
+        },
+    ];
 
-    const notificationMenu = (
-        <Menu>
-            <List
-                size="small"
-                dataSource={notifications}
-                renderItem={(item: Notification) => (
-                    <List.Item key={item.id}>
-                        {item.message}
-                    </List.Item>
-                )}
+
+    // Create a custom render function for the notification menu
+    const renderNotificationMenu = () => {
+        return (
+            <Menu
+                items={[
+                    {
+                        key: 'notifications',
+                        label: (
+                            <List
+                                size="small"
+                                dataSource={notifications}
+                                renderItem={(item: Notification) => (
+                                    <List.Item key={item.id}>
+                                        {item.message}
+                                    </List.Item>
+                                )}
+                            />
+                        ),
+                    },
+                ]}
             />
-        </Menu>
-    );
+        );
+    };
 
     return (
         <Header className={`${styles.header} ${className}`}>
             <div className={styles.logo}></div>
             <div className={styles.headerRight}>
                 <ThemeToggle />
-                <Dropdown overlay={notificationMenu} trigger={['click']}>
+                <Dropdown menu={{ items: [] }} dropdownRender={renderNotificationMenu} trigger={['click']}>
                     <Badge count={notifications.length}>
                         <BellOutlined className={styles.icon} />
                     </Badge>
@@ -74,7 +93,7 @@ const HeaderLayout: React.FC<HeaderLayoutProps> = ({ className }) => {
                 <span className={styles.username}>
                     {user.currentUser?.nin || 'Guest'} {/* Ensure currentUser is correctly set */}
                 </span>
-                <Dropdown overlay={profileMenu} trigger={['click']}>
+                <Dropdown menu={{ items: profileMenuItems }} trigger={['click']}>
                     <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
                         <Avatar icon={<UserOutlined />} shape="circle" className={styles.avatar} /> <DownOutlined />
                     </a>

@@ -139,7 +139,7 @@ const BcmDependencyTable: React.FC = () => {
             title: 'Actions',
             key: 'actions',
             render: (_: any, record: BcmDependencyPojo) => (
-                <Dropdown overlay={<Menu items={getRowMenuItems(record)} />}>
+                <Dropdown menu={{ items: getRowMenuItems(record) }}>
                     <Button type="text">
                         <MoreOutlined />
                     </Button>

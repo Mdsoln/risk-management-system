@@ -172,7 +172,7 @@ const BcmSystemListingTable: React.FC = () => {
             title: 'Actions',
             key: 'actions',
             render: (_: any, record: BcmSystemListingPojo) => (
-                <Dropdown overlay={<Menu items={getRowMenuItems(record)} />} trigger={['click']}>
+                <Dropdown menu={{ items: getRowMenuItems(record) }} trigger={['click']}>
                     <Button type="text">
                         <MoreOutlined />
                     </Button>

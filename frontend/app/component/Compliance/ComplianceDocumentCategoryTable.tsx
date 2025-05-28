@@ -159,9 +159,7 @@ const ComplianceDocumentCategoryTable: React.FC = () => {
             key: 'actions',
             render: (_: any, record: ComplianceDocumentCategoryPojo) => (
                 <Dropdown
-                    overlay={
-                        <Menu items={getRowMenuItems(record)} />
-                    }
+                    menu={{ items: getRowMenuItems(record) }}
                     trigger={['click']}
                 >
                     <Button type="text">

@@ -159,7 +159,7 @@ const BcmDamageAssessmentTable: React.FC = () => {
             key: 'actions',
             render: (_: any, record: BcmDamageAssessmentPojo) => (
                 <Dropdown
-                    overlay={<Menu items={getRowMenuItems(record)} />}
+                    menu={{ items: getRowMenuItems(record) }}
                     trigger={['click']}
                 >
                     <Button type="text">

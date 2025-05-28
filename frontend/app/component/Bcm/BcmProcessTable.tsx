@@ -165,7 +165,7 @@ const BcmProcessTable: React.FC = () => {
             title: 'Actions',
             key: 'actions',
             render: (_: any, record: BcmProcessPojo) => (
-                <Dropdown overlay={<Menu items={getRowMenuItems(record)} />} trigger={['click']}>
+                <Dropdown menu={{ items: getRowMenuItems(record) }} trigger={['click']}>
                     <Button type="text">
                         <MoreOutlined />
                     </Button>
