@@ -1,20 +1,4 @@
-//package tz.go.psssf.risk.pojo;
-//
-//import lombok.Getter;
-//import lombok.Setter;
-//
-//@Getter
-//@Setter
-//public class BusinessProcessPojo {
-//    private String id;
-//    private String name;
-//    private String description;
-//    private FundObjectivePojo fundObjective;
-//    private DepartmentPojo businessProcessOwnerDepartment;
-//    private String startDateTime;
-//    private String endDateTime;
-//}
-
+// Project: psssf-risk
 package tz.go.psssf.risk.pojo;
 
 import java.time.LocalDateTime;

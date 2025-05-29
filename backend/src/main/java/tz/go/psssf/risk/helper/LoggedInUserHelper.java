@@ -23,7 +23,7 @@ public class LoggedInUserHelper {
     
     public User getLoggedInUser() {
         // For testing purposes, return a User from Users NIN ""20199243768825047518""
-    	User userObj =  userRepository.find("nin", "20199243768825047518").firstResult();
+    	User userObj =  userRepository.find("nin", "27836700871852600133").firstResult();
     	System.out.println("########### userObj: "+ userObj.getNin());
 
         return userObj;

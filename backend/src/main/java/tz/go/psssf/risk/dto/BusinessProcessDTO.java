@@ -2,6 +2,8 @@
 package tz.go.psssf.risk.dto;
 
 import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotBlank;
@@ -38,8 +40,10 @@ public class BusinessProcessDTO {
 
     @NotNull(message = "Start Date and Time cannot be null")
     @PastOrPresent(message = "Start Date and Time cannot be in the future")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime startDateTime;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @NotNull(message = "End Date and Time cannot be null")
     @Future(message = "End Date and Time must be in the future")
     private LocalDateTime endDateTime;
