@@ -3,10 +3,7 @@
 import React from 'react';
 import { Tabs } from 'antd';
 import { TableOutlined, UnorderedListOutlined } from '@ant-design/icons';
-import dynamic from 'next/dynamic';
-import MainLayout from '@/app/component/Layout/MainLayout';
-
-const RegistriesTable = dynamic(() => import('../../component/Registry/RegistriesTable'), { ssr: false });
+import RegistriesTable from '../RiskRegistry/RegistriesTable';
 
 const RegistryPage: React.FC = () => {
     const items = [
@@ -33,9 +30,8 @@ const RegistryPage: React.FC = () => {
     ];
 
     return (
-        <MainLayout>
+     
             <Tabs defaultActiveKey="1" style={{ margin: '24px' }} items={items} />
-        </MainLayout>
     );
 };
 

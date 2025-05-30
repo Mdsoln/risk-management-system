@@ -3,17 +3,14 @@
 'use client';
 
 import React, { useState } from 'react';
-import dynamic from 'next/dynamic';
 import { Layout, Tabs } from 'antd';
 import { TableOutlined, UnorderedListOutlined } from '@ant-design/icons';
 import styles from '../../styles/Home.module.css';
 import SideNav from '../component/SideNav/SideNav';
 import RegistriesTable from '../component/Registry/RegistriesTable';
-// import ListRiskRegister from '../component/RiskRegistry/ListRiskRegister';
+import MyTable from '../component/MyTable';
 
 const { Sider, Content } = Layout;
-
-const MyTable = dynamic(() => import('../component/MyTable'), { ssr: false });
 
 const RiskRegister: React.FC = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
