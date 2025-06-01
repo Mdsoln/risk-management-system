@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
-import { Layout, Menu, Avatar, Dropdown, Badge, List } from 'antd';
+import {Layout, Menu, Avatar, Dropdown, Badge, List, MenuProps} from 'antd';
 import { UserOutlined, SettingOutlined, LockOutlined, LogoutOutlined, DownOutlined, BellOutlined } from '@ant-design/icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState, AppDispatch } from '../../../store/store';
@@ -29,27 +29,17 @@ const HeaderLayout: React.FC<HeaderLayoutProps> = ({ className }) => {
         console.log('Current User:', user.currentUser);
     }, [user.currentUser]);
 
-    const profileMenuItems = [
+    const profileMenuItems: MenuProps['items'] = [
         {
-            key: '1',
+            key: 'profile',
             icon: <UserOutlined />,
             label: 'Profile',
         },
         {
-            key: '2',
-            icon: <LockOutlined />,
-            label: 'Change Password',
+            type: 'divider' as const,
         },
         {
-            key: '3',
-            icon: <SettingOutlined />,
-            label: 'Settings',
-        },
-        {
-            type: 'divider',
-        },
-        {
-            key: '4',
+            key: 'logout',
             icon: <LogoutOutlined />,
             label: 'Logout',
         },
