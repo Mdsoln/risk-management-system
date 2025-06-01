@@ -5,12 +5,11 @@ import { Tabs } from 'antd';
 import { TableOutlined, UnorderedListOutlined, MonitorOutlined } from '@ant-design/icons';
 import dynamic from 'next/dynamic';
 import MainLayout from '@/app/component/Layout/MainLayout';
-import RegistriesTable from '@/app/component/Registry/RegistriesTable';
 
 // Dynamically import the components
-const RiskActionPlanMonitoringListForm = dynamic(() => import('../../component/Risk/RiskActionPlanMonitoringListForm'), { ssr: false });
+const RiskTable = dynamic(() => import('../../component/Risk/RiskTable'), { ssr: false });
 
-const RiskPage: React.FC = () => {
+const NewRiskPage: React.FC = () => {
     const [reloadKey, setReloadKey] = useState(0);
 
     const handleTabChange = (key: string) => {
@@ -25,22 +24,13 @@ const RiskPage: React.FC = () => {
             key: '1',
             label: (
                 <span className="globalFlexIconWithText">
-                    <TableOutlined className="globalFlexIcon" />
-                    Risk Register
+                    <UnorderedListOutlined className="globalFlexIcon" />
+                    List of Risks
                 </span>
             ),
-             children: <RegistriesTable />,
-        },
-        {
-            key: '2',
-            label: (
-                <span className="globalFlexIconWithText">
-                    <MonitorOutlined className="globalFlexIcon" />
-                    Risk Action Plan Monitoring
-                </span>
-            ),
-            children: <RiskActionPlanMonitoringListForm key={reloadKey} />,
-        },
+            children: <RiskTable />,
+            //children: <div>RiskTable Area - Test Content</div>,
+        }
     ];
 
     return (
@@ -50,4 +40,4 @@ const RiskPage: React.FC = () => {
     );
 };
 
-export default RiskPage;
+export default NewRiskPage;

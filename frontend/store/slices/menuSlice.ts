@@ -37,80 +37,11 @@ const initialState: MenuState = {
             children: [
                 { key: 'risk-management/fund-objective', label: 'Fund Objective' },
                 { key: 'risk-management/business-process', label: 'Business Process' },
+                { key: 'risk-management/new-unaccessed-risk', label: 'New Risk'},
                 { key: 'risk-management/risk', label: 'Risk' },
                 { key: 'risk-management/registry', label: 'Risk Registry' },
             ],
         },
-        // {
-        //     key: 'compliance-menu',
-        //     label: 'Compliance',
-        //     iconKey: 'FileDoneOutlined',
-        //     children: [
-        //         { key: 'compliance/dashboard', label: 'Dashboard' },
-        //         {
-        //             key: 'compliance/directorate-policies', label: 'Directorate/Unit Policies', children: [
-        //                 { key: 'compliance/directorate/operations-manual', label: 'Operations Manual' },
-        //                 { key: 'compliance/directorate/customer-service-charter', label: 'Customer Service Charter' },
-        //                 { key: 'compliance/directorate/customer-service-policy', label: 'Customer Service Policy' },
-        //                 { key: 'compliance/directorate/security-act', label: 'Social Security Act' },
-        //             ]
-        //         },
-        //         {
-        //             key: 'compliance/other-policies', label: 'Other Directorate Policies', children: [
-        //                 { key: 'compliance/other/staff-charter', label: 'Staff Charter' },
-        //                 { key: 'compliance/other/financial-policies', label: 'Financial Policies' },
-        //             ]
-        //         },
-        //         {
-        //             key: 'compliance/regulations', label: 'Regulations and Policies', children: [
-        //                 { key: 'compliance/regulations/data-management', label: 'Data Management' },
-        //                 { key: 'compliance/regulations/membership', label: 'Membership Guidelines' },
-        //                 { key: 'compliance/regulations/totalization', label: 'Totalization Guidelines' },
-        //             ]
-        //         },
-        //         {
-        //             key: 'compliance/service-providers', label: 'Service Providers', children: [
-        //                 { key: 'compliance/service/nida', label: 'National Identification Authority' },
-        //                 { key: 'compliance/service/rita', label: 'RITA' },
-        //             ]
-        //         },
-        //         { key: 'compliance/government-authorities', label: 'Government Authorities' },
-        //         { key: 'compliance/circulars', label: 'Circulars and Directives' },
-        //         { key: 'compliance/international-standards', label: 'International Standards' },
-        //         { key: 'compliance/contracts', label: 'Fund Contracts' },
-        //         {
-        //             key: 'compliance/directorate-policies', label: 'Directorate/Unit Policies', children: [
-        //                 { key: 'compliance/directorate/operations-manual', label: 'Operations Manual' },
-        //                 { key: 'compliance/directorate/customer-service-charter', label: 'Customer Service Charter' },
-        //                 { key: 'compliance/directorate/customer-service-policy', label: 'Customer Service Policy' },
-        //                 { key: 'compliance/directorate/security-act', label: 'Social Security Act' },
-        //             ]
-        //         },
-        //         {
-        //             key: 'compliance/other-policies', label: 'Other Directorate Policies', children: [
-        //                 { key: 'compliance/other/staff-charter', label: 'Staff Charter' },
-        //                 { key: 'compliance/other/financial-policies', label: 'Financial Policies' },
-        //             ]
-        //         },
-        //         {
-        //             key: 'compliance/regulations', label: 'Regulations and Policies', children: [
-        //                 { key: 'compliance/regulations/data-management', label: 'Data Management' },
-        //                 { key: 'compliance/regulations/membership', label: 'Membership Guidelines' },
-        //                 { key: 'compliance/regulations/totalization', label: 'Totalization Guidelines' },
-        //             ]
-        //         },
-        //         {
-        //             key: 'compliance/service-providers', label: 'Service Providers', children: [
-        //                 { key: 'compliance/service/nida', label: 'National Identification Authority' },
-        //                 { key: 'compliance/service/rita', label: 'RITA' },
-        //             ]
-        //         },
-        //         { key: 'compliance/government-authorities', label: 'Government Authorities' },
-        //         { key: 'compliance/circulars', label: 'Circulars and Directives' },
-        //         { key: 'compliance/international-standards', label: 'International Standards' },
-        //         { key: 'compliance/contracts', label: 'Fund Contracts' },
-        //     ],
-        // },
         {
             key: 'compliance-menu',
             label: 'Compliance',
