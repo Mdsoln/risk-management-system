@@ -48,190 +48,148 @@
             <artifactId>rest-assured</artifactId>
             <scope>test</scope>
         </dependency>
-<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.30</version>
-			<scope>provided</scope>
-		</dependency>
-<!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-resteasy-reactive-jackson -->
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-resteasy-reactive-jackson</artifactId>
-</dependency>
-<!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-hibernate-orm-panache  -->
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-hibernate-orm-panache</artifactId>
-</dependency>
-<!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-hibernate-orm-rest-data-panache -->
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-hibernate-orm-rest-data-panache</artifactId>
-</dependency>
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-rest-jackson</artifactId>
-</dependency>
-<dependency>
-    <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-databind</artifactId>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-hibernate-reactive-panache 
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-hibernate-reactive-panache</artifactId>
-</dependency>
--->
-<!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-jdbc-postgresql  -->
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-jdbc-postgresql</artifactId>
-</dependency>
- 
-<!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-reactive-pg-client
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-reactive-pg-client</artifactId>
-</dependency>
- -->
-<!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-vertx 
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-vertx</artifactId>
-</dependency>
--->
-<!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-resteasy-reactive -->
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-resteasy-reactive</artifactId>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
-<dependency>
-    <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-validator</artifactId>
-    <version>8.0.1.Final</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-envers -->
-<dependency>
-    <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-envers</artifactId>
-    <version>6.5.2.Final</version>
-    <type>pom</type>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-hibernate-envers -->
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-hibernate-envers</artifactId>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-smallrye-openapi -->
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-smallrye-openapi</artifactId>
-</dependency>
-<!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-config-yaml -->
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-config-yaml</artifactId>
-</dependency>
-<!-- https://mvnrepository.com/artifact/io.quarkus.security/quarkus-security -->
-<dependency>
-    <groupId>io.quarkus.security</groupId>
-    <artifactId>quarkus-security</artifactId>
-</dependency>
-
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-security-jpa</artifactId>
-</dependency>
-<!--
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-security-jpa-reactive</artifactId>
-</dependency>
--->
-<!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
-<dependency>
-    <groupId>org.mapstruct</groupId>
-    <artifactId>mapstruct</artifactId>
-    <version>1.5.5.Final</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct-processor -->
-<dependency>
-    <groupId>org.mapstruct</groupId>
-    <artifactId>mapstruct-processor</artifactId>
-    <version>1.5.5.Final</version>
-</dependency>
-
-<!--
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-logging-json</artifactId>
-</dependency>
--->
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-hibernate-validator</artifactId>
-</dependency>
-<!--
-<dependency>
-    <groupId>com.fasterxml.jackson.datatype</groupId>
-    <artifactId>jackson-datatype-jsr310</artifactId>
-</dependency>
--->
-<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
-<dependency>
-    <groupId>com.google.code.gson</groupId>
-    <artifactId>gson</artifactId>
-</dependency>
-
-
-	<!-- OAuth2 OIDC dependency
-    <dependency>
-        <groupId>io.quarkus</groupId>
-        <artifactId>quarkus-oidc</artifactId>
-    </dependency> -->
-
-     <!-- Quarkus Security for role-based access control -->
-    <dependency>
-        <groupId>io.quarkus</groupId>
-        <artifactId>quarkus-security</artifactId>
-    </dependency>
-
-    <!-- SmallRye JWT for handling JWT tokens -->
-    <dependency>
-        <groupId>io.quarkus</groupId>
-        <artifactId>quarkus-smallrye-jwt</artifactId>
-    </dependency>
-
-    <!-- Quarkus Arc for dependency injection -->
-    <dependency>
-        <groupId>io.quarkus</groupId>
-        <artifactId>quarkus-arc</artifactId>
-    </dependency>
-    
-    <dependency>
-    <groupId>com.fasterxml.jackson.datatype</groupId>
-    <artifactId>jackson-datatype-jsr310</artifactId>
-</dependency>
-
-<dependency>
-    <groupId>io.smallrye.reactive</groupId>
-    <artifactId>mutiny</artifactId>
-</dependency>
-
-<!-- Vertx WebSocket -->
-<dependency>
-    <groupId>io.quarkus</groupId>
-    <artifactId>quarkus-vertx</artifactId>
-</dependency>
-
-</dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-resteasy-reactive-jackson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-hibernate-orm-panache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-hibernate-orm-rest-data-panache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-rest-jackson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <!--
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-hibernate-reactive-panache</artifactId>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-jdbc-postgresql</artifactId>
+        </dependency>
+        <!--
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-reactive-pg-client</artifactId>
+        </dependency>
+        -->
+        <!--
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-vertx</artifactId>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-resteasy-reactive</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>8.0.1.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-envers</artifactId>
+            <version>6.5.2.Final</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-hibernate-envers</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-smallrye-openapi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-config-yaml</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus.security</groupId>
+            <artifactId>quarkus-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-security-jpa</artifactId>
+        </dependency>
+        <!--
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-security-jpa-reactive</artifactId>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>1.5.5.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>1.5.5.Final</version>
+        </dependency>
+        <!--
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-logging-json</artifactId>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-hibernate-validator</artifactId>
+        </dependency>
+        <!--
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+        <!--
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-oidc</artifactId>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-smallrye-jwt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.smallrye.reactive</groupId>
+            <artifactId>mutiny</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-vertx</artifactId>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
