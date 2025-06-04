@@ -26,7 +26,7 @@ quarkus:
     username: postgres
     password: mdsoln
     jdbc:
-      url: jdbc:postgresql://localhost:5432/mydatabase
+      url: jdbc:postgresql://68.183.158.185:5432/mydatabase
     # Connection pool settings
     jdbc-pool:
       min-size: 5
@@ -75,7 +75,7 @@ quarkus:
 mp:
   jwt:
     verify:
-      issuer: http://localhost:8080/auth
+      issuer: http://68.183.158.185:8080/auth
     groups:
       path: groups  # this is for roles, but leave it here if you are using roles as well
     path:

@@ -53,7 +53,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      BACKEND_URL: http://localhost:8080/api
+      BACKEND_URL: http://68.183.158.185:8080/api
     networks:
       - risknetwork
     restart: always
