@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 import tz.go.psssf.risk.entity.FundObjective;
 import tz.go.psssf.risk.helper.SeederHelper;
 import tz.go.psssf.risk.repository.FundObjectiveRepository;
@@ -14,6 +15,7 @@ public class FundObjectiveSeeder {
 	@Inject
 	FundObjectiveRepository fundObjectiveRepository;
 
+	@Transactional
 	public void seed() {
 
 		try {
