@@ -3,7 +3,7 @@ import { FundObjectivePojo, FundObjectiveDTO, PaginationResult, FundObjective, A
 import { API_V1 } from '@/app/constants/api';
 
 // Base API endpoint
-const BASE_URL = 'http://68.183.158.185:8080/api/v1/fund-objective';
+const BASE_URL = '/api/v1/fund-objective';
 
 export const getFundObjectives = async (
     page: number = 0,
